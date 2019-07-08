@@ -1,0 +1,54 @@
+.header {
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+
+    color: #ffffff;
+
+    &-wrap {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        &-svg {
+            --color-mir: #ffffff;
+            width: 99px;
+            height: 94px;
+        }
+    }
+    
+    &__nav {
+        flex-grow: 2;
+        margin-left: 57px;
+        &-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            
+            display: flex;
+            justify-content: space-between;
+            width: 460px;
+            
+        }
+        &-item {
+            font-size: 18px;
+        }
+    }
+    
+    &__info {
+        &-phone{
+            display: block;
+            margin-bottom: 20px;
+            @include montserrat-500;
+            font-size: 30px;
+            text-align: center;
+        }
+        
+    }
+}
+

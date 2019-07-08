@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="next" viewBox="0 0 23 40">
+    <title>next</title>
+    <polyline points="0,0 20,20 0,40" />
+  </symbol>
+  <symbol id="prev" viewBox="0 0 23 40">
+    <title>prev</title>
+    <polyline points="20,0 0,20 20,40" />    
+  </symbol>
+</svg>

@@ -1,0 +1,38 @@
+.promo {
+  &-wrap {
+    position: relative;
+    padding: 0 0 100px;
+  }
+
+  &__island {
+    width: 975px;
+    height: 916px;
+  }
+
+  &__rub {
+    position: absolute;
+    top: 250px;
+    left: 755px;
+    @include montserrat-400;
+    font-size: 288px;
+    color: #ffffff;
+  }
+
+  &__text {
+    position: absolute;
+    top: 250px;
+    left: 1100px;
+    width: 470px;
+    @include arkhip-400;
+    text-shadow: 0 19px 3px rgba(27, 41, 47, 0.44);
+    color: #ffffff;
+    font-size: 80px;
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+  &__boat {
+    position: absolute;
+    top: 100px;
+    left: 1000px;
+  }
+}

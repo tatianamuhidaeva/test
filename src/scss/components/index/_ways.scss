@@ -1,0 +1,163 @@
+.ways {
+  background-color: #fff;
+  
+  &-wrap {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -200px;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        background: {
+          repeat: no-repeat;
+          image: url('img/svg/main-wave.svg');
+          size: cover;
+          position: top;
+        }
+      }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &-slider {
+    position: relative;
+    &-wrapper {
+      align-items: center;
+    }
+  }
+
+  &-slide {
+    &__body{
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height: 320px;
+  
+      margin: 0 auto;
+      margin-bottom: 20px;
+      
+      text-align: center;
+      @include arkhip-400;
+      font-size: 80px;
+      color: #467aa6;
+      text-transform: uppercase;
+
+      transition-duration: 0.4s;
+      transform: scale(0.45);
+
+      strong {
+        position: relative;
+        z-index: 2;
+
+        &:hover {
+          .ways-slide__decor-left, .ways-slide__decor-right {
+            animation-play-state: paused;
+          }
+        }
+      }
+    }
+    &__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      img{
+        object-fit: contain;
+        height: 100%;
+      }
+    }
+    &__flag, &__decor-left, &__decor-right, &__info  {
+      display: none;
+    }
+  }
+  &-slide--active{
+
+    .ways-slide {
+      &__body{
+        transform: scale(1);
+      }
+
+    &__flag, &__decor-left, &__decor-right {
+      display: block;
+      position: absolute;
+      img {
+        object-fit: contain;
+      }
+    }
+      &__flag {
+        top: -75px;
+        left: 7px;
+  
+        width: 46px;
+        height: 30px;
+      }
+      &__decor-left {
+        bottom: -119px;
+        left: -81px;
+        width: 155px;
+        height: 170px;
+        animation: decorleft 5s ease-in-out infinite alternate;
+      }
+      &__decor-right {
+        top: -50px;
+        right: -78px;
+        width: 112px;
+        height: 123px;
+        animation: decorright 3s ease-in-out infinite alternate;
+      }
+      &__info {
+        display: block;
+        @include montserrat-300;
+        font-size: 30px;
+        color: $text-color;
+        text-align: center;
+      }
+    }
+  }
+
+  &__arrow {
+    top: 147px;
+    background: none;
+    &-svg {
+      width: 23px;
+      height: 40px;
+      fill: transparent;
+      stroke: rgb(208, 208, 208);
+      stroke-width: 4px;
+    }
+    &-prev {
+      left: 420px;
+    }
+    &-next {
+      right: 420px;
+    }
+  }
+}
+
+@keyframes decorleft {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}
+@keyframes decorright {
+  0% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
