@@ -1,6 +1,6 @@
 .btn {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 26px;
+    padding-right: 26px;
     display: block;
     height: 44px;
     box-shadow: 0 5px 10px rgba(23, 28, 19, 0.5);
@@ -15,4 +15,9 @@
     text-align: center;
     transition-duration: 0.2s;
     cursor: pointer;
+
+    &-y {
+      background-color: $btn-color;
+      background-image: none;
+    }
 }

@@ -1,0 +1,38 @@
+.footer {
+  
+  &-wrap {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  &__logo {
+      &-svg {
+          --color-mir: rgb(9, 83, 109);
+          width: 99px;
+          height: 94px;
+      }
+  }
+  
+  &__socials{
+    display: flex;
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
+  &__info {
+      &-phone{
+          display: block;
+          margin-bottom: 20px;
+          @include montserrat-500;
+          font-size: 30px;
+          text-align: center;
+      }
+      
+  }
+}
+

@@ -1,40 +1,14 @@
 .partners {
 
-
-  &-wrap {
-    position: relative;
-    padding-top: 150px;
-    padding-bottom: 470px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -32px;
-      left: -10px;
-      width: 102%;
-      height: 17vw;
-      z-index: 2;
-
-      background: {
-        repeat: no-repeat;
-        // color: #ffffff;
-        image: url('img/svg/top-wave.svg');
-        // size: 150% 530px;
-        position: 50% 100%;
-      }
-
-      transform: rotate(2deg);
-    }
-  }
+  padding-top: 240px;
+  padding-bottom: 470px;
 
   &__title {
     position: relative;
-    z-index: 3;
+    z-index: 4;
 
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
-
-  &__octopus {}
 
   &__compass {
     position: relative;
@@ -176,8 +150,8 @@
 
   &__description {
     position: absolute;
-    right: 200px;
-    top: 700px;
+    right: 10%;
+    top: 804px;
 
     width: 375px;
 
@@ -188,7 +162,7 @@
     font-size: 18px;
     line-height: 28px;
 
-    p{
+    p {
       margin-bottom: 30px;
     }
 
@@ -199,6 +173,7 @@
       left: 0;
       width: 87px;
       height: 87px;
+
       background: {
         repeat: no-repeat;
         color: transparent;
@@ -207,6 +182,7 @@
         position: center;
       }
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -214,6 +190,7 @@
       right: 0;
       width: 87px;
       height: 87px;
+
       background: {
         repeat: no-repeat;
         color: transparent;
@@ -221,7 +198,31 @@
         size: contain;
         position: center;
       }
+
       transform: rotate(180deg);
     }
   }
 }
+
+@media (max-width: $xlg) {
+.partners {
+  padding-bottom: 700px;
+  &__item {
+    &-5 {
+      left: 470px;
+      &::after {
+        top: 0;
+        right: 103px;
+        width: 270px;
+        background-size: auto;
+        background-position: -14px 0;
+      }
+    }
+  }
+  &__description {
+    top: 970px;
+    right: 130px;
+  }
+}
+}
+

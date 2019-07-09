@@ -1,0 +1,76 @@
+.footer {
+
+
+  &-wrap {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    &-svg {
+      --color-mir: rgb(9, 83, 109);
+      width: 120px;
+      height: 116px;
+    }
+  }
+
+  &__socials {
+
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+
+    svg {
+      --color-vk: rgb(165, 171, 175);
+      --color-odk: rgb(165, 171, 175);
+      --color-insta: rgb(165, 171, 175);
+
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__address {
+    flex-basis: 650px;
+
+    address {
+      font-style: normal;
+      font-size: 18px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+
+    &-btn {
+      margin-right: 50px;
+      padding-left: 15px;
+      padding-right: 15px;
+      height: 31px;
+      border-radius: 16px;
+
+      font-size: 16px;
+      line-height: 31px;
+    }
+
+    &-phone {
+      @include montserrat-400;
+      font-size: 18px;
+      text-align: center;
+    }
+
+  }
+}
+
+@media (max-width: $xlg) {
+  .footer {
+    &__address {
+      flex-basis: auto;
+    }  
+  }
+
+}

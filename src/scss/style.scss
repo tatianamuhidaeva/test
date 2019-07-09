@@ -13,7 +13,6 @@
 #container {
     width: 100%;
     min-height: 100%;
-    background: $bg-color url('img/static/bg/pattern-wave.jpg') repeat;
     overflow-x: hidden;
     @include montserrat-400;
     color: $text-color;
@@ -22,7 +21,7 @@
 .wrap {
     max-width: 1920px;
     margin: 0 auto;
-    padding: 0 5%;
+    padding: 0 5.8%;
 }
 
 h1,
@@ -46,10 +45,14 @@ a {
 
 .title {
     @include arkhip-400;
-    font-size: 36px;
+    font-size: 30px;
     color: $red-text-color;
     text-transform: uppercase;
     text-align: center;
+}
+
+#svg-sprites {
+  display: none;
 }
 
 .d-none {
@@ -64,13 +67,37 @@ a {
     display: flex !important;
 }
 
-@media (max-width: 1684px) {  //default-wrap / 95%
+@media (max-width: $xlg) {  //default-wrap / 95%
     .wrap {
       padding: 0 2.5%;
     }
+    .d-block-xlg {
+      display: block !important;
+  }
+
+  .d-inline-xlg {
+      display: inline !important;
+  }
+
+  .d-none-xlg {
+      display: none !important;
+  }
 }
 
 
+@media (max-width: $lg) {
+    .d-block-lg {
+        display: block !important;
+    }
+
+    .d-inline-lg {
+        display: inline !important;
+    }
+
+    .d-none-lg {
+        display: none !important;
+    }
+}
 @media (max-width: $md) {
     .d-block-md {
         display: block !important;
@@ -127,5 +154,8 @@ a {
 @import 'components/header';
 @import 'components/index/main';
 @import 'components/index/ways';
+@import 'components/index/ocean';
 @import 'components/index/partners';
 @import 'components/index/promo';
+@import 'components/index/game';
+@import 'components/footer';

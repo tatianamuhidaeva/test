@@ -1,13 +1,14 @@
 .header {
     position: absolute;
     top: 0;
+    z-index: 10;
 
     width: 100%;
 
     color: #ffffff;
 
     &-wrap {
-        padding-top: 30px;
+        padding-top: 38px;
         padding-bottom: 30px;
         display: flex;
         justify-content: space-between;

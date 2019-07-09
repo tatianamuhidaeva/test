@@ -1,28 +1,44 @@
 .promo {
-  &-wrap {
+
     position: relative;
-    padding: 0 0 100px;
-  }
+
+    z-index: 3;
+    padding: 0;
+    margin-bottom: -108px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &-num {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
   &__island {
-    width: 975px;
-    height: 916px;
+    width: 635px;
+    // height: 916px;
+    height: auto;
   }
 
   &__rub {
-    position: absolute;
-    top: 250px;
-    left: 755px;
+    // position: absolute;    
+    // top: 223px;
+    // left: 766px;
+
     @include montserrat-400;
     font-size: 288px;
     color: #ffffff;
   }
 
   &__text {
-    position: absolute;
-    top: 250px;
-    left: 1100px;
-    width: 470px;
+    // position: absolute;
+    // top: 250px;
+    // left: 1067px;
+
+    // width: 470px;
     @include arkhip-400;
     text-shadow: 0 19px 3px rgba(27, 41, 47, 0.44);
     color: #ffffff;
@@ -35,4 +51,31 @@
     top: 100px;
     left: 1000px;
   }
+}
+
+@media (max-width: $xlg) {
+.promo {
+
+  &__island {
+    width: 675px;
+  }
+  &__rub {
+    font-size: 200px;
+  }
+  &__text {
+    font-size: 70px;
+  }
+}
+}
+@media (max-width: $lg) {
+.promo {
+  margin-bottom: -220px;
+  flex-direction: column;
+  &-num{
+    margin-bottom: 50px;
+  }
+  &__text {
+    font-size: 80px;
+  }
+}
 }
