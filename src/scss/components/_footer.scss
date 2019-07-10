@@ -31,6 +31,28 @@
       width: 40px;
       height: 40px;
     }
+
+
+    &-vk:hover {
+      svg {
+
+        --color-vk: #4D76A1;
+      }
+    }
+
+    &-odk:hover {
+      svg {
+
+        --color-odk: #FF9800;
+      }
+    }
+
+    &-insta:hover {
+      svg {
+
+        --color-insta: #EE539E;
+      }
+    }
   }
 
   &__address {
@@ -54,7 +76,6 @@
       border-radius: 16px;
 
       font-size: 16px;
-      line-height: 31px;
     }
 
     &-phone {
@@ -70,7 +91,45 @@
   .footer {
     &__address {
       flex-basis: auto;
-    }  
+    }
   }
+}
 
+@media (max-width: $md) {
+  .footer {
+    &-wrap {
+      padding-top: 100px;
+      padding-bottom: 54px;
+      flex-direction: column;
+    }
+
+    &__logo {
+      &-svg {
+        --color-mir: #000000;
+        width: 206px;
+        height: 195px;
+      }
+
+      margin-bottom: 54px;
+    }
+
+    &__socials {
+
+      width: 203px;
+      margin-bottom: 130px;
+
+      svg {
+        width: 51px;
+        height: 51px;
+      }
+    }
+
+    &__info {
+      &-btn {
+        margin-right: 0;
+        @include big-btn;
+
+      }
+    }
+  }
 }

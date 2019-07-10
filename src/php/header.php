@@ -20,12 +20,17 @@
     <header class="header" id="header">
       <div class="header-wrap wrap">
         <div class="header__logo">
-          <svg class="header__logo-svg">
-            <use xlink:href="#logo" />
-          </svg>
+          <a href="#">
+            <svg class="header__logo-svg">
+              <use xlink:href="#logo" />
+            </svg>
+          </a>
         </div>
         <nav class="header__nav">
-          <ul class="header__nav-items">
+          <div class="header__nav-hamburger d-none d-block-md">
+            <span></span>
+          </div>
+          <ul class="header__nav-items d-none-md">
             <li class="header__nav-item"><a href="#" class="header__nav-link">Направления</a></li>
             <li class="header__nav-item"><a href="#" class="header__nav-link">Туры</a></li>
             <li class="header__nav-item"><a href="#" class="header__nav-link">Блог</a></li>
@@ -33,8 +38,11 @@
           </ul>
         </nav>
         <div class="header__info">
-          <a href="tel:8800999999" class="header__info-phone">8 800 999 999</a>
-          <a href="#" class="header__info-btn btn">показать мир?</a>
+          <a href="tel:8800999999" class="header__info-phone">
+          <span class="d-none-md">8 800 999 999</span>    
+          <img class="d-none d-block-md" src="<?php bloginfo('template_directory') ?>/img/svg/call-answer.svg">     
+        </a>
+          <a href="#" class="header__info-btn btn d-none-md">показать мир?</a>
         </div>
       </div>
     </header>

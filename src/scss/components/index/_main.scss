@@ -97,15 +97,47 @@
     &-wrap {
       padding-top: 270px;
       padding-bottom: 303px;
+      background-image: url('img/static/bg/bg-main/bg-main@1684.jpg');
+
     }
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: $lg) {
   .main {
-    background: {
-      image: url('img/static/bg/bg-main/bg-main@992.jpg');
+    &-wrap {
+      background-image: url('img/static/bg/bg-main/bg-main@1366.jpg');
+
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .main {
+    &-wrap {
+      background-image: url('img/static/bg/bg-main/bg-main@992.jpg');
     }
 
+  &__title {
+    width: 565px;
+    text-align: center;
+    img {
+      margin-bottom: 35px;
+    }
+  }    
+  &__subtitle {
+    padding: 0 23px 10px;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    line-height: 48px;
+  }
+  }
+}
+
+@media (max-width: $sm) {
+  .main {
+    &-wrap {
+      background-image: url('img/static/bg/bg-main/bg-main@768.jpg');
+    }
   }
 }

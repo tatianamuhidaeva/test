@@ -3,13 +3,17 @@
   <section class="main">
     <header class="main-wrap wrap">
       <h1>Мир объединяет</h1>
-      <div class="main__title">
+      <div class="main__title d-none-md">
         <img class="main__title-img" src="<?php bloginfo('template_directory') ?>/img/static/world-unites.png" alt="" sizes="" srcset="">
         <div class="main__title-compass"></div>
         <div class="main__title-romb-top d-none-lg"></div>
         <div class="main__title-romb-right d-none-lg"></div>
         <div class="main__title-romb-bottom d-none-lg"></div>
         <div class="main__title-romb-left d-none-lg"></div>
+        <span class="main__subtitle">направления</span>
+      </div>
+      <div class="main__title d-none d-block-md">
+        <img class="main__title-img" src="<?php bloginfo('template_directory') ?>/img/static/world-unites-md.png" alt="" sizes="" srcset="">
         <span class="main__subtitle">направления</span>
       </div>
     </header>
@@ -40,7 +44,7 @@
                   </div>
                 </strong>
               </div>
-              <div class="ways-slide__info">
+              <div class="ways-slide__info d-none-md">
                 от 28 000 руб.
               </div>
             </div>
@@ -64,7 +68,7 @@
                   </div>
                 </strong>
               </div>
-              <div class="ways-slide__info">
+              <div class="ways-slide__info d-none-md">
                 от 28 000 руб.
               </div>
             </div>
@@ -88,12 +92,12 @@
                   </div>
                 </strong>
               </div>
-              <div class="ways-slide__info">
+              <div class="ways-slide__info d-none-md">
                 от 28 000 руб.
               </div>
             </div>
           </div>
-          <div class="ways__pagination swiper-pagination d-none d-block-sm">
+          <div class="ways__pagination swiper-pagination d-none d-block-md">
           </div>
           <div class="ways__arrow ways__arrow-prev arrow arrow-prev swiper-button-prev" id="ways__prev">
             <svg class="ways__arrow-svg">

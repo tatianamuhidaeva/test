@@ -122,3 +122,34 @@
     }
   }
 }
+@media (max-width: $md) {
+  .game {
+    &-wrap{
+      padding-top: 895px;
+      padding-left: 2.5%;
+    }
+    &-fishes {
+      &__fish {
+  
+        &-tail {
+          top: 213px;
+          right: -236px;
+        }
+      }
+    }
+
+    &-content{
+      text-align: center;
+      margin: 0 auto;
+    }
+    &__title {
+      text-align: center;
+    }
+    &__btn {
+      text-align: center;
+      margin: 0 auto;
+
+      @include big-btn;
+    }
+  }
+}
