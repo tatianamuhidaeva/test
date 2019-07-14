@@ -133,3 +133,24 @@
     }
   }
 }
+
+@media (max-width: $xs) {
+  .footer {
+    &-wrap {
+      padding-top: 60px;
+      padding-bottom: 54px;
+      flex-direction: column;
+    }
+    &__logo {
+      &-svg {
+        width: 180px;
+        height: 175px;
+      }
+
+      margin-bottom: 54px;
+    }
+    &__socials {
+      margin-bottom: 50px;
+    }
+  }
+}

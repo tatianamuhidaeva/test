@@ -118,19 +118,21 @@
       background-image: url('img/static/bg/bg-main/bg-main@992.jpg');
     }
 
-  &__title {
-    width: 565px;
-    text-align: center;
-    img {
-      margin-bottom: 35px;
+    &__title {
+      width: 565px;
+      text-align: center;
+
+      img {
+        margin-bottom: 35px;
+      }
     }
-  }    
-  &__subtitle {
-    padding: 0 23px 10px;
-    border-radius: 10px;
-    border: 1px solid #ffffff;
-    line-height: 48px;
-  }
+
+    &__subtitle {
+      padding: 0 23px 10px;
+      border-radius: 10px;
+      border: 1px solid #ffffff;
+      line-height: 48px;
+    }
   }
 }
 
@@ -138,6 +140,43 @@
   .main {
     &-wrap {
       background-image: url('img/static/bg/bg-main/bg-main@768.jpg');
+      background-position: left top;
+    }
+
+    &__title {
+      width: 500px;
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .main {
+    &__title{
+      width: 400px;
+    }
+    &__subtitle {
+      padding: 0 17px 6px;
+      font-size: 38px;
+      line-height: 38px;
+    }
+  }
+}
+@media (max-width: $xxs) {
+  .main {
+    &-wrap{
+      padding-top: 230px;
+      padding-bottom: 200px;
+    }
+    &__title{
+      width: 280px;
+      &-img {
+        margin-bottom: 17px;
+      }
+    }
+    &__subtitle {
+      padding: 0 17px 6px;
+      font-size: 28px;
+      line-height: 28px;
     }
   }
 }

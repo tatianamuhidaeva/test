@@ -3,6 +3,9 @@
 @import 'settings/vars';
 @import 'settings/mixins';
 @import 'widgets/interface';
+@import 'widgets/breadcrumbs';
+@import 'widgets/banner';
+@import 'widgets/price-table';
 
 *,
 *::before,
@@ -11,11 +14,29 @@
 }
 
 #container {
+    position: relative;
     width: 100%;
     min-height: 100%;
     overflow-x: hidden;
     @include montserrat-400;
     color: $text-color;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      z-index: -1;
+
+      background: {
+        repeat: no-repeat;
+        image: url('img/static/meduses/medusa-1.png'), url('img/static/meduses/medusa-2.png'), url('img/static/meduses/medusa-3.png');
+        position: calc(50% + 300px) 150px, calc(50% + 700px) 300px, calc(50% + 300px) 700px;
+      }
+    }
 }
 
 .wrap {
@@ -23,6 +44,8 @@
     margin: 0 auto;
     padding: 0 5.8%;
 }
+// .wrap-page {
+// }
 
 h1,
 h2,
@@ -46,7 +69,7 @@ a {
 .title {
     @include arkhip-400;
     font-size: 30px;
-    color: $red-text-color;
+    color: $title-color;
     text-transform: uppercase;
     text-align: center;
 }
@@ -71,6 +94,8 @@ a {
     .wrap {
       padding: 0 2.5%;
     }
+
+   
     .d-block-xlg {
       display: block !important;
   }
@@ -86,6 +111,9 @@ a {
 
 
 @media (max-width: $lg) {
+  // .wrap-page {
+  //   padding: 0 20px;
+  // }
     .d-block-lg {
         display: block !important;
     }
@@ -152,10 +180,7 @@ a {
 @import 'lib/animate';
 @import 'lib/swiper.min';
 @import 'components/header';
-@import 'components/index/main';
-@import 'components/index/ways';
-@import 'components/index/ocean';
-@import 'components/index/partners';
-@import 'components/index/promo';
-@import 'components/index/game';
+@import 'components/pages/tblock';
+@import 'components/pages/hot-tours';
+@import 'components/pages/way-one';
 @import 'components/footer';

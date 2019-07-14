@@ -1,0 +1,44 @@
+.hot-tours {
+  &-wrap {
+    display: flex;
+  }
+
+  .main {
+    flex-grow: 2;
+    &-wrap{
+      @include wrap-page;
+    }
+  }
+
+  .aside {
+    width: 305px;
+    @include banner-v;
+  }
+}
+
+@media (max-width: $xlg) {
+  .hot-tours {
+    &-wrap {
+      flex-direction: column;
+    }
+
+    .main {
+      margin-bottom: 70px;
+    }
+
+    .aside {
+      width: 100%;
+        @include wrap-page;
+      @include banner-h;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  @include table-v;
+  .hot-tours {
+    .aside {
+      @include banner-v;
+    }
+  }
+}

@@ -2,26 +2,29 @@ window.addEventListener('DOMContentLoaded', function () {
   'use strict'
   // -----Control Toggle Menu----
   let body = document.querySelector('body'),
-    menu = document.querySelector('.header__nav-items'),
-    btnToggle = document.querySelector('.header__nav-hamburger');
+    menu = document.querySelector('.header__nav'),
+    btnToggle = document.querySelector('.header__hamburger');
 
   function openMenu() {
-    menu.classList.remove('d-none-md');
-    menu.classList.add('animated');
-    menu.classList.add('fadeIn');
+    // menu.classList.remove('d-none-md');
+    btnToggle.classList.add('active');
+    menu.classList.add('open');
   }
 
   function closeMenu() {
     // menu.style.opacity = "0";
-    menu.classList.add('fadeOut');
+    // menu.classList.add('fadeOut');
     
-    setTimeout(menu.classList.remove('d-none-md'), 400 );
-    menu.classList.add('animated');
+    // setTimeout(menu.classList.remove('d-none-md'), 400 );
+    // menu.classList.add('animated');
+
+    btnToggle.classList.remove('active');
+    menu.classList.remove('open');
 
   }
 
   btnToggle.addEventListener('click', function () {
-    if (menu.classList.contains('d-none-md')) {
+    if (!btnToggle.classList.contains('active')) {
       openMenu();
     } else {
       closeMenu();

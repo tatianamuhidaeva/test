@@ -14,7 +14,7 @@
 </svg>
 <svg width="1920" height="630">
   <pattern id="pattern-wave" width="300" height="303" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
-    <image xlink:href="<?php bloginfo('template_directory') ?>/img/static/bg/pattern-wave.jpg" />
+    <image xlink:href="../img/static/bg/pattern-wave.jpg" />
   </pattern>
   <mask id="mask">
     <use xlink:href="#mask-coral" />

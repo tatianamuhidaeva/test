@@ -352,3 +352,177 @@
     }
   }
 }
+
+@media (max-width: $xs) {
+  .partners {
+
+    padding-top: 240px;
+    padding-bottom: 470px;
+  
+    &__title {
+      margin-bottom: 80px;
+    }
+  
+    &__compass {
+  
+      width: 285px;
+      height: 285px;
+  
+  
+      &-logo {
+  
+        width: 165px;
+        height: 165px;
+  
+        &-svg {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  
+    &__item {
+  
+      width: 80px;
+      height: 80px;
+      
+      img {
+        transform: scale(0.8);
+      }
+      &-1 {
+        top: 203px;
+        left: -161px;
+        &::after {
+          bottom: 92px;
+          left: 36px;
+        }
+      }
+
+      &-2 {    
+        top: 329px;
+        left: -99px;
+        &::after {    
+          bottom: 90px;
+          left: 41px;
+        }
+      }
+
+      &-3 {    
+        top: 205px;
+        left: -15px;
+        &::after {
+          bottom: 91px;
+          left: 34px;
+        }
+      }
+
+      &-4 {
+        top: 326px;
+        left: 63px;
+        &::after {
+          bottom: 92px;
+          left: 16px;
+        }
+      }
+
+      &-5 {
+        top: 203px;
+        left: 127px;
+        &::after {    
+          bottom: 91px;
+          left: -9px;
+        }
+      }
+    }
+  
+    &__description {
+      font-size: 16px;
+      max-width: none;
+      p {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+@media (max-width: $xxs) {
+  .partners {
+
+    padding-top: 240px;
+    padding-bottom: 470px;
+  
+    &__title {
+      margin-bottom: 80px;
+    }
+
+  
+    &__item {
+  
+      width: 70px;
+      height: 70px;
+      
+      img {
+        transform: scale(0.7);
+      }
+      &-1 {
+        top: 207px;
+        left: -121px;
+        &::after {
+          bottom: 81px;
+          left: 36px;
+          height: 127px;
+          
+        }
+      }
+
+      &-2 {    
+        top: 330px;
+        left: -83px;
+        &::after {    
+          bottom: 81px;
+          left: 41px;
+        }
+      }
+
+      &-3 {    
+        top: 195px;
+        left: -15px;
+        &::after {
+          bottom: 81px;
+          left: 30px;
+        }
+      }
+
+      &-4 {    
+        top: 327px;
+        left: 42px;
+        &::after {
+          bottom: 81px;
+          left: 16px;
+
+        }
+      }
+
+      &-5 {
+        top: 203px;
+        left: 88px;
+        &::after {    
+          bottom: 81px;
+    left: -14px;
+    height: 122px;
+        }
+      }
+    }
+  
+    &__description {
+      padding: 20px 27px 15px;
+      font-size: 14px;
+      p {
+        margin-bottom: 15px;
+      }
+      &::before, &::after {
+        width: 60px;
+        height: 60px;
+      }  
+    }
+  }
+}

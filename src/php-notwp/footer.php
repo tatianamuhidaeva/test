@@ -41,17 +41,15 @@
 
 <div id="svg-sprites">
   <?php
-  $src = get_template_directory_uri();
-  $src .=  "/img/logo.svg";
-  echo file_get_contents($src); ?>
+  echo file_get_contents('../img/logo.svg') ?>
 
   <?php
-  $src = get_template_directory_uri();
-  $src .=  "/img/svg/sprite/arrows.svg";
+  // $src = get_template_directory_uri();
+  $src =  "../img/svg/sprite/arrows.svg";
   echo file_get_contents($src); ?>
   <?php
-  $src = get_template_directory_uri();
-  $src .=  "/img/svg/sprite/socials.svg";
+  // $src = get_template_directory_uri();
+  $src =  "../img/svg/sprite/socials.svg";
   echo file_get_contents($src); ?>
 </div>
 

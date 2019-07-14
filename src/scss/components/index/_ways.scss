@@ -35,7 +35,6 @@
 
       background: {
         repeat: no-repeat;
-        // color: #ffffff;
         image: url('img/svg/top-wave.svg');
         size: cover;
         position: 50% 100%;
@@ -76,7 +75,7 @@
       text-align: center;
       @include arkhip-400;
       font-size: 80px;
-      color: #467aa6;
+      color: $ways-color;
       text-transform: uppercase;
 
       transition-duration: 0.4s;
@@ -86,6 +85,7 @@
         position: relative;
         z-index: 2;
 
+        
         &:hover {
 
           .ways-slide__decor-left,
@@ -238,16 +238,17 @@
 
 @media (max-width: $lg) {
   $k: 0.8;
+
   .ways {
     &-wrap {
       padding-top: ($k * 5px);
       padding-bottom: ($k * 125px);
     }
-  
+
     &__title {
       margin-bottom: ($k * 57px);
     }
-  
+
     &-slide {
       &__body {
         height: ($k * 320px);
@@ -255,50 +256,50 @@
         font-size: ($k * 70px);
       }
     }
-  
+
     &-slide--active {
-  
+
       .ways-slide {
-  
+
         &__flag {
           top: ($k * -75px);
           left: ($k * 7px);
-  
+
           width: ($k * 46px);
           height: ($k * 30px);
         }
-  
+
         &__decor-left {
           bottom: ($k * -119px);
           left: ($k * -81px);
           width: ($k * 155px);
           height: ($k * 170px);
         }
-  
+
         &__decor-right {
           top: ($k * -50px);
           right: ($k * -78px);
           width: ($k * 112px);
           height: ($k * 123px);
         }
-  
+
         &__info {
           font-size: ($k * 30px);
         }
       }
     }
-  
+
     &__arrow {
-      
+
       &-svg {
         width: ($k * 23px);
         height: ($k * 40px);
       }
-  
+
       &-prev {
         transform: translateX(calc(-50% - 226px))
       }
-  
+
       &-next {
         transform: translateX(calc(-50% + 226px))
       }
@@ -308,56 +309,59 @@
 
 @media (max-width: $md) {
   $k: 0.7;
+
   .ways {
     &-wrap {
       padding-top: ($k * 5px);
       padding-bottom: ($k * 125px);
     }
-  
+
     &__title {
       margin-bottom: ($k * 57px);
     }
-  
+
     &-slide {
       &__body {
         height: ($k * 320px);
         margin-bottom: ($k * 36px);
         font-size: 64px;
       }
+
+
     }
-  
+
     &-slide--active {
-  
+
       .ways-slide {
-  
+
         &__flag {
-          top: ($k * -75px);
-          left: ($k * 7px);
-  
+            top: -60px;
+            left: 2px;
+
           width: ($k * 46px);
           height: ($k * 30px);
         }
-  
+
         &__decor-left {
           bottom: ($k * -119px);
           left: ($k * -81px);
           width: ($k * 155px);
           height: ($k * 170px);
         }
-  
+
         &__decor-right {
           top: ($k * -50px);
           right: ($k * -78px);
           width: ($k * 112px);
           height: ($k * 123px);
         }
-  
+
         &__info {
           font-size: ($k * 30px);
         }
       }
     }
-  
+
     &__arrow {
 
       &-svg {
@@ -365,24 +369,210 @@
         height: 40px;
         stroke: #75c132;
       }
-  
+
       &-prev {
         transform: translateX(calc(-50% - 310px))
       }
-  
+
       &-next {
         transform: translateX(calc(-50% + 310px))
       }
     }
   }
-  .swiper-pagination-bullet{
+
+  .swiper-pagination-bullet {
     width: 11px;
     height: 11px;
     background-color: #75c132;
     opacity: 1;
   }
+
   .swiper-pagination-bullet-active {
     background-color: #ffd031;
+  }
+
+}
+
+@media (max-width: $sm) {
+  .ways {
+
+    &__arrow {
+
+      &-prev {
+        transform: translateX(calc(-50% - 238px))
+      }
+
+      &-next {
+        transform: translateX(calc(-50% + 238px))
+      }
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  $k: 0.5;
+
+  .ways {
+    &-wrap {
+      padding-top: 25px;
+      padding-bottom: 125px;
+    }
+
+    &__title {
+      margin-bottom: ($k * 57px);
+    }
+
+    &-slide {
+      &__body {
+        height: ($k * 320px);
+        margin-bottom:  36px;
+        font-size: $k * 80px;
+      }
+
+
+    }
+
+    &-slide--active {
+
+      .ways-slide {
+
+        &__flag {
+            top: -60px;
+            left: 2px;
+
+          width: ($k * 46px);
+          height: ($k * 30px);
+        }
+
+        &__decor-left {
+          bottom: ($k * -119px);
+          left: ($k * -81px);
+          width: ($k * 155px);
+          height: ($k * 170px);
+        }
+
+        &__decor-right {
+          top: ($k * -50px);
+          right: ($k * -78px);
+          width: ($k * 112px);
+          height: ($k * 123px);
+        }
+
+        &__info {
+          font-size: ($k * 30px);
+        }
+      }
+    }
+
+    &__arrow {
+      top: 83px;
+      &-svg {
+        width: 0.7 * 23px;
+        height: 0.7 * 40px;
+        stroke: #75c132;
+      }
+
+      &-prev {
+        transform: translateX(calc(-50% - 156px))
+      }
+
+      &-next {
+        transform: translateX(calc(-50% + 156px))
+      }
+    }
+
+    &__pagination {
+      bottom: 0;
+    }
+  }
+
+  @keyframes decorleft {
+    0% {
+      transform: translateY(-$k * 50px);
+    }
+  
+    100% {
+      transform: translateY($k * 30px);
+    }
+  }
+  
+  @keyframes decorright {
+    0% {
+      transform: translateY($k * 15px);
+    }
+  
+    100% {
+      transform: translateY(-$k * 20px);
+    }
+  }
+}
+@media (max-width: $xxs) {
+  $k: 0.4;
+
+  .ways {
+    &-wrap {
+      padding-top: 25px;
+      padding-bottom: 125px;
+    }
+
+    &__title {
+      margin-bottom: ($k * 57px);
+    }
+
+    &-slide {
+      &__body {
+        height: ($k * 320px);
+        margin-bottom:  36px;
+        font-size: $k * 80px;
+      }
+
+
+    }
+
+    &-slide--active {
+
+      .ways-slide {
+
+        &__flag {
+            top: -60px;
+            left: 2px;
+
+          width: ($k * 46px);
+          height: ($k * 30px);
+        }
+
+        &__decor-left {
+          bottom: ($k * -119px);
+          left: ($k * -81px);
+          width: ($k * 155px);
+          height: ($k * 170px);
+        }
+
+        &__decor-right {
+          top: ($k * -50px);
+          right: ($k * -78px);
+          width: ($k * 112px);
+          height: ($k * 123px);
+        }
+
+        &__info {
+          font-size: ($k * 30px);
+        }
+      }
+    }
+
+    &__arrow {
+      top: 71px;
+
+      &-prev {
+        transform: translateX(calc(-50% - 127px))
+      }
+
+      &-next {
+        transform: translateX(calc(-50% + 127px))
+      }
+    }
+
   }
 
 }

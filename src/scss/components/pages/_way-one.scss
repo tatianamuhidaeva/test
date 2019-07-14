@@ -1,0 +1,64 @@
+.way-one {
+  &-wrap {
+    display: flex;
+  }
+
+  .tblock {
+    padding-bottom: 370px;
+    margin-bottom: -300px;
+  }
+
+  .main {
+    flex-grow: 2;
+
+    &-wrap {
+      @include wrap-page;
+    }
+  }
+
+  &-slider{
+    position: relative;
+    text-align: center;
+    &-container{
+      width: 100%;
+
+    }
+  }
+
+  &-slide {
+
+  }
+
+  .aside {
+    width: 305px;
+    @include banner-v;
+  }
+}
+
+@media (max-width: $xlg) {
+  .way-one {
+    &-wrap {
+      flex-direction: column;
+    }
+
+    .main {
+      margin-bottom: 70px;
+    }
+
+    .aside {
+      width: 100%;
+      @include wrap-page;
+      @include banner-h;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  @include table-v;
+
+  .way-one {
+    .aside {
+      @include banner-v;
+    }
+  }
+}

@@ -153,3 +153,46 @@
     }
   }
 }
+
+@media (max-width: $sm) {
+  .game {
+    &-wrap{
+      padding-top: 720px;
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .game {
+    &-wrap {
+      padding-top: 770px;
+    }
+    &-fishes {
+      &__fish {
+  
+        &-tail {
+          top: 379px;
+          right: auto;
+          left: 94px;
+
+        }
+      }
+    }
+  }
+}
+@media (max-width: $xxs) {
+  .game {
+    &-wrap {
+      padding-top: 770px;
+    }
+    &-fishes {
+      &__fish {
+  
+        &-tail {
+          top: 463px;
+          left: 68px;
+        }
+      }
+    }
+  }
+}

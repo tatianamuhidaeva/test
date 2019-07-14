@@ -78,6 +78,7 @@ gulp.task("serve", function() {
 	gulp.watch(srcPath + "/js/components/*.js", ["js-components"]);
 	gulp.watch(srcPath + "/js/separate/*.js", ["js-copy"]);
 	gulp.watch(srcPath + "/php/**/*.php", ["php"]);
+	gulp.watch(srcPath + "/php/*.php", ["php"]);
 });
 
 // Styles

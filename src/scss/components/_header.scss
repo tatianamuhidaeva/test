@@ -2,11 +2,11 @@
   position: absolute;
   top: 0;
   z-index: 10;
-
   width: 100%;
-
   color: #ffffff;
-
+  a:hover {
+    color: #000;
+  }
   &-wrap {
     padding-top: 38px;
     padding-bottom: 30px;
@@ -39,6 +39,7 @@
 
     &-item {
       font-size: 18px;
+      
     }
   }
 
@@ -59,81 +60,170 @@
     &-wrap {
       justify-content: space-around;
     }
-    &__nav {
-      flex-basis: 106px;
+
+    &__hamburger {
+      // flex-basis: 106px;
       order: -1;
-      flex-grow: 0;
-      margin-left: 0;
 
-      &-hamburger {
-        width: 62px;
-        height: 43px;
-        position: relative;
-        cursor: pointer;
+      position: relative;
 
-        span,
-        &::before,
-        &::after {
-          width: 62px;
-          height: 9px;
-          border-radius: 5px;
-          background-color: #fff;
-          position: absolute;
-          top: 50%;
-          left: 0;
-        }
+      z-index: 100;
+      cursor: pointer;
+      background: transparent;
+      background-clip: content-box;
+      width: 62px;
+      height: 43px;
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent;
+      transform: rotate(0deg);
+      transition: all 0.25s ease-in-out;
+      border-radius: 5px;
+
+      span,
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        background: #fff;
+        border-radius: 5px;
+        height: 9px;
+        width: 100%;
+        right: 0;
+        will-change: rotate;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+      }
+
+      span {
+        top: 0;
+      }
+
+      &:before {
+        top: -16px;
+      }
+
+      &:after {
+        bottom: -14px;
+      }
+
+      &.active {
+        transform: translate(-40px, -40px);
 
         span {
-          transform: translate(0, -50%);
+          background: transparent;
         }
 
-        &::before {
-          content: "";
-          transform: translate(0, calc(-150% - 7px));
+        &:before {
+          transform: rotate(135deg) translate(6px, -6px);
+          top: 0;
+          background: $text-color;
+          // width: 110%;
+          height: 2px;
+          width: 40px;
         }
 
-        &::after {
-          content: "";
-          transform: translate(0, calc(50% + 7px));
+        &:after {
+          bottom: 0;
+          transform: rotate(-135deg);
+          background: $text-color;
+          // width: 110%;
+          height: 2px;
+          width: 40px;
+
+        }
+      }
+
+    }
+
+    &__nav {
+      position: fixed;
+      background: rgba(255, 255, 255, 0.7);
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transform-origin: right top;
+      transform: scale(0);
+      visibility: hidden;
+      transition: all 0.4s ease-in-out;
+      overflow: hidden;
+
+      &.open {
+        opacity: 0.99;
+        visibility: visible;
+        transform: scale(1);
+
+        li {
+          display: block;
+          animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
+          animation-delay: 0.4s;
+          transform: rotate(-7deg);
+          transform-origin: right bottom;
+
+          &:nth-of-type(2) {
+            animation-delay: 0.5s;
+          }
+
+          &:nth-of-type(3) {
+            animation-delay: 0.6s;
+          }
+
+          &:nth-of-type(4) {
+            animation-delay: 0.7s;
+          }
+
+          &:nth-of-type(5) {
+            animation-delay: 0.8s;
+          }
         }
       }
 
       &-items {
-        // display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 0px;
-        left: 50%;
-        transform: translateX(-50%);
-        
-        // padding: 30px 35px 20px;
-        padding: 30px 0;
+        padding: 0;
 
-        // background-image: linear-gradient(to right, #87b8d4 0%, #acb6e5 100%);
-        background-color: $btn-color;
-        
-      }
-      &-item {
-        width: 100%;
-
-        a{
+        li {
           display: block;
-          line-height: 80px;
+          position: relative;
+          opacity: 0;
           width: 100%;
-          color: $text-color;
-          font-size: 25px;
-          font-weight: 600;
-          text-align: center;
-          &:hover {
-            // background-color: $btn-color;
-            background-color: rgba($text-color,0.5);
-            color: #ffffff;
-          }
+          text-align: right;
 
+          a {
+            display: inline-block;
+            border: 1px solid $text-color;
+            background-color: $btn-color;
+            color: $text-color;
+            font-size: 30px;
+            font-weight: 500;
+            padding: 10px 40px 10px 40px;
+            margin: 5px 0;
+            transition: 0.5s;
+
+            &:hover,
+            &:active,
+            &:focus {
+              transform: translateX(-2px);
+              padding-left: 80px;
+              outline: 1px solid rgba(255, 255, 255, 0.3);
+              // background: #000;
+            }
+          }
         }
+
+        // }
       }
+
+
     }
 
     &__logo {
@@ -159,10 +249,93 @@
         height: 106px;
         border-radius: 50%;
         background-color: $btn-color;
+
       }
 
       img {
         width: 56px;
+      }
+    }
+  }
+
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 50px;
+    }
+
+    100% {
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .header {
+    &__logo {
+      &-svg {
+        width: 96px;
+        height: 99px;
+      }
+    }
+
+    &__hamburger {
+      $k: 0.7;
+      width: $k * 62px;
+      height: $k * 43px;
+      border-top: $k * 16px solid transparent;
+      border-bottom: $k * 16px solid transparent;
+      // border-radius: 5px;
+
+      span,
+      &:before,
+      &:after {
+        // border-radius: 5px;
+        height: $k * 9px;
+      }
+
+      span {
+        top: 0;
+      }
+
+      &:before {
+        top: -$k * 16px;
+      }
+
+      &:after {
+        bottom: -$k * 14px;
+      }
+
+    }
+
+    &__info {
+      flex-basis: 70px;
+
+      &-phone {
+        width: 70px;
+        height: 70px;
+      }
+      img {
+        width: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: $xxs) {
+  .header {
+  
+    &__info {
+      flex-basis: 55px;
+
+      &-phone {
+        width: 55px;
+        height: 55px;
+      }
+      img {
+        width: 30px;
       }
     }
   }

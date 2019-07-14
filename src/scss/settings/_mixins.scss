@@ -62,3 +62,11 @@
     font-family: 'Arkhip', sans-serif;
     font-weight: 800;
 } 
+
+@mixin wrap-page {
+  padding: 0 155px;
+
+@media (max-width: $lg) {
+  padding: 0 20px;
+}
+}
