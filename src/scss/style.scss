@@ -1,8 +1,11 @@
 @import 'lib/normalize';
+@import 'lib/swiper.min';
+
 @import 'settings/fonts';
 @import 'settings/vars';
 @import 'settings/mixins';
-@import 'widgets/interface';
+
+@import 'settings/animate';
 
 *,
 *::before,
@@ -158,8 +161,8 @@ a {
   }
 }
 
-@import 'lib/animate';
-@import 'lib/swiper.min';
+@import 'widgets/interface';
+
 @import 'components/header';
 @import 'components/index/main';
 @import 'components/index/ways';

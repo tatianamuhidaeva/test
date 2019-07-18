@@ -10,7 +10,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: -200px;
+      top: -198px;
       left: -1px;
       right: -1px;
       height: 200px;
@@ -193,25 +193,6 @@
   }
 }
 
-@keyframes decorleft {
-  0% {
-    transform: translateY(-50px);
-  }
-
-  100% {
-    transform: translateY(30px);
-  }
-}
-
-@keyframes decorright {
-  0% {
-    transform: translateY(15px);
-  }
-
-  100% {
-    transform: translateY(-20px);
-  }
-}
 
 @media (max-width: $xlg) {
   .ways {
@@ -483,26 +464,6 @@
 
     &__pagination {
       bottom: 0;
-    }
-  }
-
-  @keyframes decorleft {
-    0% {
-      transform: translateY(-$k * 50px);
-    }
-  
-    100% {
-      transform: translateY($k * 30px);
-    }
-  }
-  
-  @keyframes decorright {
-    0% {
-      transform: translateY($k * 15px);
-    }
-  
-    100% {
-      transform: translateY(-$k * 20px);
     }
   }
 }

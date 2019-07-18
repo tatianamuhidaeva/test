@@ -1,0 +1,304 @@
+
+//main by Index
+@keyframes rotate {
+  0% {
+    transform: rotate(-35deg);
+  }
+
+  100% {
+    transform: rotate(35deg);    
+  }
+}
+
+.rotateSmall {
+  animation: rotateSmall both ease-in-out;  
+}
+
+@keyframes rotateSmall {
+  0% {
+    transform: rotate(0);
+    // animation-timing-function: ease-in;
+  }
+  25% {
+    transform: rotate(-7deg);
+    // animation-timing-function: ease;
+  }
+
+
+  75% {
+    transform: rotate(7deg);    
+    // animation-timing-function: ease-out;
+  }
+
+  100% {
+    transform: rotate(0);    
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1s both;  
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeInDown {
+  animation: fadeInDown both;  
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  animation: fadeInUp both;  
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+// .fadeInUp.rotateSmall {
+//   animation: fadeInUp 1s both, rotateSmall both 1;  
+// }
+
+@keyframes widthInLeft {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes heightInNormal {
+  from {
+    height: 130vh;
+  }
+
+  to {
+    height: 90vh;
+  }
+}
+
+.moveUpDown {
+  animation: moveUpDown both alternate ease-in-out;
+}
+@keyframes moveUpDown {
+  from {
+    transform: translate3d(0, -20%, 0);
+  }
+
+  to {
+    transform: translate3d(0, 20%, 0);
+  }
+}
+
+
+@keyframes boat {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(30deg) translate3d(-270px, 450px, 0);
+  }
+}
+.boat {
+  animation: boat both linear;
+}
+
+.fishTail  {
+  animation: {
+    name: fishTail;
+    duration: 6s;
+    fill-mode: both;
+    direction: alternate;
+    delay: 0.5s;
+    iteration-count: infinite;
+  }      
+}
+
+@keyframes fishTail {
+  0% {
+    transform: translate3d(-150px, -60px, 0) rotate(10deg);
+    // height: 100px;
+    // opacity: 0;
+  }
+
+  75% {
+    transform: translate3d(0, 0, 0) rotate(-5deg);
+    // height: 100px;
+
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    // opacity: 1;
+    // height: 200px;
+  }
+}
+.fishGroup  {
+  animation: {
+    name: fishGroup;
+    duration: 6s;
+    fill-mode: both;
+    direction: alternate;
+    iteration-count: infinite;
+  }      
+}
+
+@keyframes fishGroup {
+  0% {
+    transform: translate3d(-50px, -200px, 0);
+  }
+
+  25% {
+    transform: translate3d(30px, 50px, 0);
+  }
+
+  50% {
+    transform: translate3d(60px, -10px, 0);
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    transform: translate3d(10px, 90px, 0);
+  }
+
+}
+
+.fish1  {
+  animation: {
+    name: fish1;
+    duration: 6s;
+    fill-mode: both;
+    direction: alternate;
+    iteration-count: infinite;
+  }     
+}
+
+@keyframes fish1 {
+  0% {
+    transform: translate3d(50px, -50px, 0);
+  }
+
+  100% {
+    transform: translate3d(-70px, 90px, 0);
+  }
+}
+
+.fish2  {
+  animation: {
+    name: fish2;
+    duration: 6s;
+    fill-mode: both;
+    timing-function: linear;
+    direction: alternate;
+    iteration-count: infinite;
+  }     
+}
+
+@keyframes fish2 {
+  0% {
+    transform: translate3d(100px, -100px, 0);
+  }
+
+  40% {
+    transform: translate3d(-70px, 70px, 0);
+  }
+
+  75% {
+    transform: translate3d(10px, 80px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fish3  {
+  animation: {
+    name: fish3;
+    duration: 6s;
+    fill-mode: both;
+    timing-function: linear;
+    direction: alternate;
+    iteration-count: infinite;
+  }     
+}
+
+@keyframes fish3 {
+  0% {
+    transform: translate3d(50px, -50px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+// ways by Index
+@keyframes decorleft {
+  0% {
+    transform: translateY(-50px);
+  }
+
+  100% {
+    transform: translateY(30px);
+  }
+}
+
+@keyframes decorright {
+  0% {
+    transform: translateY(15px);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+@media (max-width: $xs) {
+  $k: 0.5;
+
+  @keyframes decorleft {
+    0% {
+      transform: translateY(-$k * 50px);
+    }
+  
+    100% {
+      transform: translateY($k * 30px);
+    }
+  }
+  
+  @keyframes decorright {
+    0% {
+      transform: translateY($k * 15px);
+    }
+  
+    100% {
+      transform: translateY(-$k * 20px);
+    }
+  }
+}

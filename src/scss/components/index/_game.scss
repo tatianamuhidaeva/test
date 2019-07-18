@@ -19,12 +19,11 @@
   &-fishes {
     &__fish {
       position: absolute;
-      z-index: 1;
+      // z-index: 1;
 
       &-tail {
         top: 58px;
         left: 982px;
-
       }
 
       &-1 {
@@ -112,7 +111,7 @@
     &-fishes {
       &__fish {
         position: absolute;
-        z-index: 1;
+        // z-index: 1;
   
         &-tail {
           left: auto;

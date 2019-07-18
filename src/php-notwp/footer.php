@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer wow fadeInDown" data-wow-duration="2s">
   <div class="footer-wrap wrap">
     <div class="footer__logo">
       <a href="#">

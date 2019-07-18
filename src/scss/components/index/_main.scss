@@ -5,6 +5,7 @@
   }
 
   &-wrap {
+    height: 130vh;
     padding-top: 377px;
     padding-bottom: 320px;
 
@@ -14,7 +15,13 @@
       position: center top;
       size: cover;
     }
+
+    animation: fadeIn 3s both, heightInNormal 2s ease-in forwards 5s; 
+
   }
+  $delay-animation: 1s;
+  $delay-animation__title: $delay-animation + 1s;
+  $delta: 0.4s;
 
   &__title {
     position: relative;
@@ -22,12 +29,12 @@
     max-width: 834px;
     margin: 0 auto;
     text-align: right;
+    animation: fadeIn 3s both $delay-animation; 
 
     &-img {
       position: relative;
       z-index: 1;
     }
-
     &-compass {
       position: absolute;
       top: -41px;
@@ -42,6 +49,9 @@
         size: contain;
         position: center;
       }
+     
+    animation: fadeIn 1s both $delay-animation__title, rotate 3s ease-in-out infinite alternate; 
+
     }
 
     &-romb-top,
@@ -61,36 +71,54 @@
         size: contain;
         position: center;
       }
+
     }
-
     &-romb-top {
-
       transform: translateY(-150px) rotate(90deg);
+      animation: fadeIn 1s both ($delay-animation__title + $delta);
     }
 
     &-romb-right {
-
       transform: translateX(679px) rotate(180deg);
+      animation: fadeIn 1s both ($delay-animation__title + 2 * $delta);
     }
 
     &-romb-bottom {
-
       transform: translateY(150px) rotate(-90deg);
+      animation: fadeIn 1s both ($delay-animation__title + 3 * $delta);
     }
 
     &-romb-left {
       transform: translateX(-350px) rotate(0);
+      animation: fadeIn 1s both ($delay-animation__title + 4 * $delta);
     }
   }
 
   &__subtitle {
+    display: inline-block;
+
     text-shadow: 0 5px 7px #1b2a3a;
     color: #ffffff;
     @include montserrat-300;
     font-size: 48px;
     line-height: 1;
+
+    animation: fadeIn 1s both ($delay-animation__title + 5 * $delta);
+
+    &::after {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 100%;
+      background-color: #fff;
+
+      transform-origin: 0 50%;
+      animation: widthInLeft 1s both ($delay-animation__title + 5 * $delta);
+    }
   }
 }
+
+
 
 @media (max-width: $xlg) {
   .main {
