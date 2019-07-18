@@ -1,4 +1,4 @@
-.game {
+.game-ind {
   &-wrap {
     position: relative;
     padding-top: 485px;
@@ -97,7 +97,7 @@
 }
 
 @media (max-width: $xlg) {
-  .game {
+  .game-ind {
 
     &-wrap {
       padding-top: 647px;
@@ -107,7 +107,7 @@
   }
 }
 @media (max-width: $lg) {
-  .game {
+  .game-ind {
     &-fishes {
       &__fish {
         position: absolute;
@@ -122,7 +122,7 @@
   }
 }
 @media (max-width: $md) {
-  .game {
+  .game-ind {
     &-wrap{
       padding-top: 895px;
       padding-left: 2.5%;
@@ -154,7 +154,7 @@
 }
 
 @media (max-width: $sm) {
-  .game {
+  .game-ind {
     &-wrap{
       padding-top: 720px;
     }
@@ -162,7 +162,7 @@
 }
 
 @media (max-width: $xs) {
-  .game {
+  .game-ind {
     &-wrap {
       padding-top: 770px;
     }
@@ -180,7 +180,7 @@
   }
 }
 @media (max-width: $xxs) {
-  .game {
+  .game-ind {
     &-wrap {
       padding-top: 770px;
     }

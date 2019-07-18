@@ -1,4 +1,4 @@
-.promo {
+.promo-ind {
 
   position: relative;
 
@@ -62,7 +62,7 @@
 }
 
 @media (max-width: $xlg) {
-  .promo {
+  .promo-ind {
 
     &__island {
       width: 445px;
@@ -79,7 +79,7 @@
 }
 
 @media (max-width: $lg) {
-  .promo {
+  .promo-ind {
     margin-bottom: -220px;
     flex-direction: column;
     justify-content: space-between;
@@ -96,7 +96,7 @@
 }
 
 @media (max-width: $md) {
-  .promo {
+  .promo-ind {
     margin-bottom: -425px;
     &__rub {
       font-size: 160px;
@@ -108,7 +108,7 @@
   }
 }
 @media (max-width: $sm) {
-  .promo {
+  .promo-ind {
     margin-bottom: -425px;
     &__island {
       width: 400px;
@@ -123,7 +123,7 @@
   }
 }
 @media (max-width: $xs) {
-  .promo {
+  .promo-ind {
     margin-bottom: -500px;
     &-num {
       margin-bottom: 25px;
@@ -141,7 +141,7 @@
   }
 }
 @media (max-width: $xxs) {
-  .promo {
+  .promo-ind {
     margin-bottom: -550px;
     &-num {
       margin-bottom: 10px;

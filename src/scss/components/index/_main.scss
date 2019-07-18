@@ -1,4 +1,4 @@
-.main {
+.main-ind {
 
   h1 {
     text-indent: -9999px;
@@ -121,7 +121,7 @@
 
 
 @media (max-width: $xlg) {
-  .main {
+  .main-ind {
     &-wrap {
       padding-top: 270px;
       padding-bottom: 303px;
@@ -132,7 +132,7 @@
 }
 
 @media (max-width: $lg) {
-  .main {
+  .main-ind {
     &-wrap {
       background-image: url('img/static/bg/bg-main/bg-main@1366.jpg');
 
@@ -141,8 +141,9 @@
 }
 
 @media (max-width: $md) {
-  .main {
+  .main-ind {
     &-wrap {
+      padding-top: 230px;
       background-image: url('img/static/bg/bg-main/bg-main@992.jpg');
     }
 
@@ -165,7 +166,7 @@
 }
 
 @media (max-width: $sm) {
-  .main {
+  .main-ind {
     &-wrap {
       background-image: url('img/static/bg/bg-main/bg-main@768.jpg');
       background-position: left top;
@@ -178,7 +179,7 @@
 }
 
 @media (max-width: $xs) {
-  .main {
+  .main-ind {
     &__title{
       width: 400px;
     }
@@ -190,7 +191,7 @@
   }
 }
 @media (max-width: $xxs) {
-  .main {
+  .main-ind {
     &-wrap{
       padding-top: 230px;
       padding-bottom: 200px;

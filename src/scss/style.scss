@@ -14,6 +14,7 @@
 }
 
 #container {
+    position: relative;
     width: 100%;
     min-height: 100%;
     overflow-x: hidden;
@@ -27,14 +28,6 @@
     padding: 0 5.8%;
 }
 
-.header {
-  color: #ffffff;
-  &__logo {
-    &-svg {
-      --color-mir: #ffffff !important;
-    }
-  }
-}
 
 h1,
 h2,
@@ -55,12 +48,24 @@ a {
     transition-duration: 0.2s;
 }
 
-.title {
+address {
+  font-style: normal;
+}
+
+.title-index {
     @include arkhip-400;
     font-size: 30px;
     color: $red-text-color;
     text-transform: uppercase;
     text-align: center;
+}
+
+.title {
+  @include arkhip-400;
+  font-size: 20px;
+  line-height: 1.5;
+  color: $title-color;
+  text-transform: uppercase;
 }
 
 #svg-sprites {
@@ -137,9 +142,13 @@ a {
         display: none !important;
     }
 
-    .title {
+    .title-index {
       font-size: 28px;
   }
+
+  .title {
+    font-size: 18px;
+}
 }
 
 @media (max-width: $xs) {
@@ -155,19 +164,43 @@ a {
         display: none !important;
     }
 
-    .title {
+    .title-index {
       font-size: 21px;
       text-align: center;
   }
+  .title {
+    font-size: 16px;
+    text-align: center;
+}
 }
 
 @import 'widgets/interface';
+@import 'widgets/breadcrumbs';
+@import 'widgets/banner';
+@import 'widgets/price-table';
+@import 'widgets/reviews';
+@import 'widgets/gallery';
+@import 'widgets/feedback';
+@import 'widgets/article';
 
 @import 'components/header';
+
 @import 'components/index/main';
 @import 'components/index/ways';
 @import 'components/index/ocean';
 @import 'components/index/partners';
 @import 'components/index/promo';
 @import 'components/index/game';
+
+@import 'components/pages/tblock';
+@import 'components/pages/hot-tours';
+@import 'components/pages/way-one';
+@import 'components/pages/ways-page';
+@import 'components/pages/one-tour';
+@import 'components/pages/contacts';
+@import 'components/pages/game';
+@import 'components/pages/game-res';
+@import 'components/pages/blog';
+@import 'components/pages/one-article';
+
 @import 'components/footer';

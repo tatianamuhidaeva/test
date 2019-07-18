@@ -1,148 +1,149 @@
-<?php include('header.php') ?>
-<main id="main">
-  <section class="main">
-    <header class="main-wrap wrap">
+<?php $addClass = "header-index";
+include('header.php') ?>
+<main id="main-ind">
+  <section class="main-ind">
+    <header class="main-ind-wrap wrap">
       <h1>Мир объединяет</h1>
-      <div class="main__title d-none-md">
-        <img class="main__title-img" src="../img/static/world-unites.png" alt="" sizes="" srcset="">
-        <div class="main__title-compass"></div>
-        <div class="main__title-romb-top d-none-lg"></div>
-        <div class="main__title-romb-right d-none-lg"></div>
-        <div class="main__title-romb-bottom d-none-lg"></div>
-        <div class="main__title-romb-left d-none-lg"></div>
-        <span class="main__subtitle">направления</span>
+      <div class="main-ind__title d-none-md">
+        <img class="main-ind__title-img" src="../img/static/world-unites.png" alt="" sizes="" srcset="">
+        <div class="main-ind__title-compass"></div>
+        <div class="main-ind__title-romb-top d-none-lg"></div>
+        <div class="main-ind__title-romb-right d-none-lg"></div>
+        <div class="main-ind__title-romb-bottom d-none-lg"></div>
+        <div class="main-ind__title-romb-left d-none-lg"></div>
+        <span class="main-ind__subtitle">направления</span>
       </div>
-      <div class="main__title d-none d-block-md">
-        <img class="main__title-img" src="../img/static/world-unites-md.png" alt="" sizes="" srcset="">
-        <span class="main__subtitle">направления</span>
+      <div class="main-ind__title d-none d-block-md">
+        <img class="main-ind__title-img" src="../img/static/world-unites-md.png" alt="" sizes="" srcset="">
+        <span class="main-ind__subtitle">направления</span>
       </div>
     </header>
   </section>
-  <section class="ways">
-    <div class="ways-wrap wrap">
-      <h2 class="ways__title title">Популярные направления</h2>
-      <div class="ways-slider">
-        <div class="ways-slider-container swiper-container" id="ways-slider">
-          <div class="ways-slider-wrapper swiper-wrapper">
-            <div class="ways-slide swiper-slide wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-              <div class="ways-slide__body">
-                <div class="ways-slide__bg">
+  <section class="ways-ind">
+    <div class="ways-ind-wrap wrap">
+      <h2 class="ways-ind__title title-index">Популярные направления</h2>
+      <div class="ways-ind-slider">
+        <div class="ways-ind-slider-container swiper-container" id="ways-ind-slider">
+          <div class="ways-ind-slider-wrapper swiper-wrapper">
+            <div class="ways-ind-slide swiper-slide wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+              <div class="ways-ind-slide__body">
+                <div class="ways-ind-slide__bg">
                   <img src="../img/content/ways/country/bg-vietnam.png" alt="">
                 </div>
                 <strong>
                   <a href="#">
                     ВЬЕТНАМ
                   </a>
-                  <div class="ways-slide__flag">
+                  <div class="ways-ind-slide__flag">
                     <img src="../img/content/ways/country/flag-vietnam.png" alt="">
                   </div>
-                  <div class="ways-slide__decor-left">
+                  <div class="ways-ind-slide__decor-left">
                     <img src="../img/content/ways/country/decor-left-vietnam.png" alt="">
                   </div>
-                  <div class="ways-slide__decor-right">
+                  <div class="ways-ind-slide__decor-right">
                     <img src="../img/content/ways/country/decor-right-vietnam.png" alt="">
                   </div>
                 </strong>
               </div>
-              <div class="ways-slide__info d-none-md">
+              <div class="ways-ind-slide__info d-none-md">
                 от 28 000 руб.
               </div>
             </div>
-            <div class="ways-slide swiper-slide wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
-              <div class="ways-slide__body">
-                <div class="ways-slide__bg">
+            <div class="ways-ind-slide swiper-slide wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
+              <div class="ways-ind-slide__body">
+                <div class="ways-ind-slide__bg">
                   <img src="../img/content/ways/country/bg-thailand.png" alt="">
                 </div>
                 <strong>
                   <a href="#">
                     Таиланд
                   </a>
-                  <div class="ways-slide__flag">
+                  <div class="ways-ind-slide__flag">
                     <img src="../img/content/ways/country/flag-thailand.png" alt="">
                   </div>
-                  <div class="ways-slide__decor-left">
+                  <div class="ways-ind-slide__decor-left">
                     <img src="../img/content/ways/country/decor-left-thailand.png" alt="">
                   </div>
-                  <div class="ways-slide__decor-right">
+                  <div class="ways-ind-slide__decor-right">
                     <img src="../img/content/ways/country/decor-right-thailand.png" alt="">
                   </div>
                 </strong>
               </div>
-              <div class="ways-slide__info d-none-md">
+              <div class="ways-ind-slide__info d-none-md">
                 от 28 000 руб.
               </div>
             </div>
-            <div class="ways-slide swiper-slide wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
-              <div class="ways-slide__body">
-                <div class="ways-slide__bg">
+            <div class="ways-ind-slide swiper-slide wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
+              <div class="ways-ind-slide__body">
+                <div class="ways-ind-slide__bg">
                   <img src="../img/content/ways/country/bg-china.png" alt="">
                 </div>
                 <strong>
                   <a href="#">
                     Китай
                   </a>
-                  <div class="ways-slide__flag">
+                  <div class="ways-ind-slide__flag">
                     <img src="../img/content/ways/country/flag-china.png" alt="">
                   </div>
-                  <div class="ways-slide__decor-left">
+                  <div class="ways-ind-slide__decor-left">
                     <img src="../img/content/ways/country/decor-left-china.png" alt="">
                   </div>
-                  <div class="ways-slide__decor-right">
+                  <div class="ways-ind-slide__decor-right">
                     <img src="../img/content/ways/country/decor-right-china.png" alt="">
                   </div>
                 </strong>
               </div>
-              <div class="ways-slide__info d-none-md">
+              <div class="ways-ind-slide__info d-none-md">
                 от 28 000 руб.
               </div>
             </div>
           </div>
-          <div class="ways__pagination swiper-pagination d-none d-block-md">
+          <div class="ways-ind__pagination swiper-pagination d-none d-block-md">
           </div>
-          <div class="ways__arrow ways__arrow-prev arrow arrow-prev swiper-button-prev" id="ways__prev">
-            <svg class="ways__arrow-svg">
+          <div class="ways-ind__arrow ways-ind__arrow-prev arrow arrow-prev swiper-button-prev" id="ways-ind__prev">
+            <svg class="ways-ind__arrow-svg">
               <use xlink:href="#prev" />
             </svg>
           </div>
-          <div class="ways__arrow ways__arrow-next arrow arrow-next swiper-button-next" id="ways__next">
-            <svg class="ways__arrow-svg">
+          <div class="ways-ind__arrow ways-ind__arrow-next arrow arrow-next swiper-button-next" id="ways-ind__next">
+            <svg class="ways-ind__arrow-svg">
               <use xlink:href="#next" />
             </svg>
           </div>
         </div>
       </div>
   </section>
-  <div class="ocean">
-    <div class="ocean-wrap wrap">
-    <section class="partners">
-        <h2 class="partners__title title">Мир объединяет</h2>
-        <div class="partners__octopus wow fadeInUp" data-wow-duration="2s">
-          <div class="partners__compass wow rotateSmall" data-wow-duration="2s">
-            <div class="partners__compass-logo">
-              <svg class="partners__compass-logo-svg">
+  <div class="ocean-ind">
+    <div class="ocean-ind-wrap wrap">
+      <section class="partners-ind">
+        <h2 class="partners-ind__title title-index">Мир объединяет</h2>
+        <div class="partners-ind__octopus wow fadeInUp" data-wow-duration="2s">
+          <div class="partners-ind__compass wow rotateSmall" data-wow-duration="2s">
+            <div class="partners-ind__compass-logo">
+              <svg class="partners-ind__compass-logo-svg">
                 <use xlink:href="#logo" />
               </svg>
             </div>
-            <ul class="partners__items">
-              <li class="partners__item partners__item-1 wow fadeIn" data-wow-delay="2s">
+            <ul class="partners-ind__items">
+              <li class="partners-ind__item partners-ind__item-1 wow fadeIn" data-wow-delay="2s">
                 <img src="../img/content/partners/logo-teztur.png" alt="">
               </li>
-              <li class="partners__item partners__item-2 wow fadeIn" data-wow-delay="2.2s">
+              <li class="partners-ind__item partners-ind__item-2 wow fadeIn" data-wow-delay="2.2s">
                 <img src="../img/content/partners/logo-anex.png" alt="">
               </li>
-              <li class="partners__item partners__item-3 wow fadeIn" data-wow-delay="2.4s">
+              <li class="partners-ind__item partners-ind__item-3 wow fadeIn" data-wow-delay="2.4s">
                 <img src="../img/content/partners/logo-сoral.png" alt="">
               </li>
-              <li class="partners__item partners__item-4 wow fadeIn" data-wow-delay="2.6s">
+              <li class="partners-ind__item partners-ind__item-4 wow fadeIn" data-wow-delay="2.6s">
                 <img src="../img/content/partners/logo-sunmar.png" alt="">
               </li>
-              <li class="partners__item partners__item-5 wow fadeIn" data-wow-delay="2.8s">
+              <li class="partners-ind__item partners-ind__item-5 wow fadeIn" data-wow-delay="2.8s">
                 <img src="../img/content/partners/logo-pegas.png" alt="">
               </li>
             </ul>
           </div>
         </div>
-        <div class="partners__description wow fadeIn" data-wow-delay="3s">
+        <div class="partners-ind__description wow fadeIn" data-wow-delay="3s">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor.
           </p>
@@ -150,26 +151,26 @@
             Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
           </p>
         </div>
-    </section>
-    <section class="promo wow fadeIn">
-      <div class="promo-num">
-        <img class="promo__island wow moveUpDown" data-wow-duration="3s" data-wow-iteration="infinite" src="../img/static/island-zero.png" alt="">
-        <div class="promo__rub wow moveUpDown" data-wow-delay="0.5s" data-wow-duration="3s" data-wow-iteration="infinite"> &#8381;</div>
-      </div>
-        <div class="promo__text wow moveUpDown" data-wow-delay="1s" data-wow-duration="4s" data-wow-iteration="infinite">
+      </section>
+      <section class="promo-ind wow fadeIn">
+        <div class="promo-ind-num">
+          <img class="promo-ind__island wow moveUpDown" data-wow-duration="12s" data-wow-iteration="infinite" src="../img/static/island-zero.png" alt="">
+          <div class="promo-ind__rub wow moveUpDown" data-wow-delay="0.5s" data-wow-duration="5s" data-wow-iteration="infinite"> &#8381;</div>
+        </div>
+        <div class="promo-ind__text wow moveUpDown" data-wow-delay="1s" data-wow-duration="5s" data-wow-iteration="infinite">
           наценка <br> на все <br> туры
         </div>
-        <div class="promo__boat wow moveUpDown"   data-wow-duration="2s" data-wow-delay="6s" data-wow-iteration="infinite">
+        <div class="promo-ind__boat wow moveUpDown" data-wow-duration="2s" data-wow-delay="6s" data-wow-iteration="infinite">
           <img class="wow boat" data-wow-duration="5s" src="../img/static/boat.png" alt="">
         </div>
-    </section>
+      </section>
+    </div>
   </div>
-  </div>
-  <section class="game">
-    <div class="game-wrap wrap">
-      <div class="game-svg">
+  <section class="game-ind">
+    <div class="game-ind-wrap wrap">
+      <div class="game-ind-svg">
         <svg width="100%" height="675">
-        <symbol id="mask-coral" width="1921" height="675" viewBox="0 0 1920 2900" preserveAspectRatio="xMinYMax slice">
+          <symbol id="mask-coral" width="1921" height="675" viewBox="0 0 1920 2900" preserveAspectRatio="xMinYMax slice">
             <defs>
               <style>
                 .cls-1 {
@@ -186,48 +187,38 @@
           <mask id="mask">
             <use xlink:href="#mask-coral" />
           </mask>
-  
+
           <g mask="url(#mask)">
             <rect width="1921" height="630" fill="url(#pattern-wave)" />
           </g>
         </svg>
       </div>
-<div class="game-fishes">
+      <div class="game-ind-fishes">
 
-  <img src="../img/static/main-fishes/fishtail.png" alt="рыбка" class="game-fishes__fish game-fishes__fish-tail wow fishTail">
-  <img src="../img/static/main-fishes/fish-1.png" alt="рыбка" class="game-fishes__fish game-fishes__fish-1 d-none-md fish1">
-  <img src="../img/static/main-fishes/fish-2.png" alt="рыбка" class="game-fishes__fish game-fishes__fish-2 d-none-md fish2">
-  <img src="../img/static/main-fishes/fish-3.png" alt="рыбка" class="game-fishes__fish game-fishes__fish-3 d-none-md fish3">
-  <img src="../img/static/main-fishes/fish-4.png" alt="рыбка" class="game-fishes__fish game-fishes__fish-4 d-none-md">
-  <img src="../img/static/main-fishes/fish-2.png" alt="рыбка" class="game-fishes__fish game-fishes__fish-5 d-none-md">
-  <img src="../img/static/main-fishes/fish-3.png" alt="рыбка" class="game-fishes__fish game-fishes__fish-6 d-none-xlg">
-  <img src="../img/static/main-fishes/fish-4.png" alt="рыбка" class="game-fishes__fish game-fishes__fish-7 d-none-xlg">
-
-
-  <img src="../img/static/main-fishes/fish-group.png" alt="рыбка" class="game-fishes__fish game-fishes__fish-group-1 fishGroup">
-  <img src="../img/static/main-fishes/fish-group-2.png" alt="рыбка" class="game-fishes__fish game-fishes__fish-group-2">
-</div>
-
-<div class="game-content wow fadeInUp" data-wow-duration="2s">
-  <h2 class="game__title title">
-    Где живут русалки?
-  </h2>
-  <p class="game__subtitle">Ответь и получи шанс их увидеть</p>
-
-  <button class="game__btn btn btn-y">хотите узнать?</button>
-</div>
+        <img src="../img/static/main-fishes/fishtail.png" alt="рыбка" class="game-ind-fishes__fish game-ind-fishes__fish-tail wow fishTail">
+        <img src="../img/static/main-fishes/fish-1.png" alt="рыбка" class="game-ind-fishes__fish game-ind-fishes__fish-1 d-none-md fish1">
+        <img src="../img/static/main-fishes/fish-2.png" alt="рыбка" class="game-ind-fishes__fish game-ind-fishes__fish-2 d-none-md fish2">
+        <img src="../img/static/main-fishes/fish-3.png" alt="рыбка" class="game-ind-fishes__fish game-ind-fishes__fish-3 d-none-md fish3">
+        <img src="../img/static/main-fishes/fish-4.png" alt="рыбка" class="game-ind-fishes__fish game-ind-fishes__fish-4 d-none-md fishGroup">
+        <img src="../img/static/main-fishes/fish-2.png" alt="рыбка" class="game-ind-fishes__fish game-ind-fishes__fish-5 d-none-md fish2">
+        <img src="../img/static/main-fishes/fish-3.png" alt="рыбка" class="game-ind-fishes__fish game-ind-fishes__fish-6 d-none-xlg fish3">
+        <img src="../img/static/main-fishes/fish-4.png" alt="рыбка" class="game-ind-fishes__fish game-ind-fishes__fish-7 d-none-xlg fish3">
 
 
+        <img src="../img/static/main-fishes/fish-group.png" alt="рыбка" class="game-ind-fishes__fish game-ind-fishes__fish-group-1 fishGroup">
+        <img src="../img/static/main-fishes/fish-group-2.png" alt="рыбка" class="game-ind-fishes__fish game-ind-fishes__fish-group-2 fish2">
+      </div>
+
+      <div class="game-ind-content wow fadeInUp" data-wow-duration="2s">
+        <h2 class="game-ind__title title-index">
+          Где живут русалки?
+        </h2>
+        <p class="game-ind__subtitle">Ответь и получи шанс их увидеть</p>
+
+        <button class="game-ind__btn btn btn-y">хотите узнать?</button>
+      </div>
     </div>
   </section>
 </main>
-<link rel="stylesheet" href="../style.css">
-    <script src="../js/plugins/swiper.min.js"></script>
-    <script src="../js/plugins/wow.min.js"></script>
-    <script src="../js/components/swiperсustomize.js"></script>
-    <script src="../js/components/toggle-menu.js"></script>
-    <!-- <script src="../js/components/wow-my.js"></script> -->
-    <script>
-    new WOW().init();
-    </script>
+
 <?php include('footer.php'); ?>

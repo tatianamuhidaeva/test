@@ -1,4 +1,4 @@
-.partners {
+.partners-ind {
 
   padding-top: 240px;
   padding-bottom: 470px;
@@ -207,7 +207,7 @@
 }
 
 @media (max-width: $xlg) {
-  .partners {
+  .partners-ind {
     padding-bottom: 700px;
 
     &__item {
@@ -232,7 +232,7 @@
 }
 
 @media (max-width: $lg) {
-  .partners {
+  .partners-ind {
     &__item {
       &-1 {
         top: -35px;
@@ -267,7 +267,7 @@
 }
 
 @media (max-width: $md) {
-  .partners {
+  .partners-ind {
     padding-bottom: 500px;
     &__item {
       &-1 {
@@ -356,7 +356,7 @@
 }
 
 @media (max-width: $xs) {
-  .partners {
+  .partners-ind {
 
     padding-top: 240px;
     padding-bottom: 470px;
@@ -447,7 +447,7 @@
   }
 }
 @media (max-width: $xxs) {
-  .partners {
+  .partners-ind {
 
     padding-top: 240px;
     padding-bottom: 470px;

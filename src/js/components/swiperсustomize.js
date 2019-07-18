@@ -1,16 +1,16 @@
 'use strict'
 window.addEventListener('DOMContentLoaded', function () {
 
-  var stepsSwiper = new Swiper('#ways-slider', {
+  var stepsSwiper = new Swiper('#ways-ind-slider', {
     slidesPerView: 3,
     slidesPerGroup: 1,
     loop: true,
     // spaceBetween: 30,
     navigation: {
-      prevEl: '.ways__arrow-prev',
-      nextEl: '.ways__arrow-next',
+      prevEl: '.ways-ind__arrow-prev',
+      nextEl: '.ways-ind__arrow-next',
     },
-    slideActiveClass: 'ways-slide--active',
+    slideActiveClass: 'ways-ind-slide--active',
     centeredSlides: true,
     speed: 500,
     breakpoints: {
@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', function () {
         slidesPerGroup: 1,
         spaceBetween: 1,
         pagination: {
-          el: '.ways__pagination',
+          el: '.ways-ind__pagination',
           type: 'bullets',
           clickable: true
         }

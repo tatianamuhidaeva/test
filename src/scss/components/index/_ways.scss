@@ -1,4 +1,4 @@
-.ways {
+.ways-ind {
   background-color: #fff;
 
   &-wrap {
@@ -88,8 +88,8 @@
         
         &:hover {
 
-          .ways-slide__decor-left,
-          .ways-slide__decor-right {
+          .ways-ind-slide__decor-left,
+          .ways-ind-slide__decor-right {
             animation-play-state: paused;
           }
         }
@@ -119,7 +119,7 @@
 
   &-slide--active {
 
-    .ways-slide {
+    .ways-ind-slide {
       &__body {
         transform: scale(1);
       }
@@ -195,13 +195,13 @@
 
 
 @media (max-width: $xlg) {
-  .ways {
+  .ways-ind {
     &-wrap {
       padding-bottom: 142px;
     }
 
     &-slide--active {
-      .ways-slide {
+      .ways-ind-slide {
         &__decor-left {
           width: 133px;
           height: 146px;
@@ -220,7 +220,7 @@
 @media (max-width: $lg) {
   $k: 0.8;
 
-  .ways {
+  .ways-ind {
     &-wrap {
       padding-top: ($k * 5px);
       padding-bottom: ($k * 125px);
@@ -240,7 +240,7 @@
 
     &-slide--active {
 
-      .ways-slide {
+      .ways-ind-slide {
 
         &__flag {
           top: ($k * -75px);
@@ -291,7 +291,7 @@
 @media (max-width: $md) {
   $k: 0.7;
 
-  .ways {
+  .ways-ind {
     &-wrap {
       padding-top: ($k * 5px);
       padding-bottom: ($k * 125px);
@@ -313,7 +313,7 @@
 
     &-slide--active {
 
-      .ways-slide {
+      .ways-ind-slide {
 
         &__flag {
             top: -60px;
@@ -375,7 +375,7 @@
 }
 
 @media (max-width: $sm) {
-  .ways {
+  .ways-ind {
 
     &__arrow {
 
@@ -393,7 +393,7 @@
 @media (max-width: $xs) {
   $k: 0.5;
 
-  .ways {
+  .ways-ind {
     &-wrap {
       padding-top: 25px;
       padding-bottom: 125px;
@@ -415,7 +415,7 @@
 
     &-slide--active {
 
-      .ways-slide {
+      .ways-ind-slide {
 
         &__flag {
             top: -60px;
@@ -470,7 +470,7 @@
 @media (max-width: $xxs) {
   $k: 0.4;
 
-  .ways {
+  .ways-ind {
     &-wrap {
       padding-top: 25px;
       padding-bottom: 125px;
@@ -492,7 +492,7 @@
 
     &-slide--active {
 
-      .ways-slide {
+      .ways-ind-slide {
 
         &__flag {
             top: -60px;

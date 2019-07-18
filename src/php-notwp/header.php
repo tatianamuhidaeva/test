@@ -18,7 +18,7 @@
 
 <body>
   <div id="container">
-    <header class="header" id="header">
+    <header class="header <?echo $addClass; ?>" id="header">
       <div class="header-wrap wrap">
         <div class="header__logo">
           <a href="#">

@@ -4,11 +4,18 @@
   z-index: 10;
   width: 100%;
 
-  // color: #000000;
   a:hover {
     color: #000;
   }
 
+  &.header-index {
+    color: #ffffff;
+    &__logo {
+      &-svg {
+        --color-mir: #ffffff !important;
+      }
+    }
+  }
   &-wrap {
     padding-top: 38px;
     padding-bottom: 30px;

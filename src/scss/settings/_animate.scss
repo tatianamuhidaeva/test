@@ -100,7 +100,7 @@
   }
 
   to {
-    height: 90vh;
+    height: 98vh;
   }
 }
 
@@ -133,7 +133,7 @@
 .fishTail  {
   animation: {
     name: fishTail;
-    duration: 6s;
+    duration: 18s;
     fill-mode: both;
     direction: alternate;
     delay: 0.5s;
@@ -162,7 +162,7 @@
 .fishGroup  {
   animation: {
     name: fishGroup;
-    duration: 6s;
+    duration: 18s;
     fill-mode: both;
     direction: alternate;
     iteration-count: infinite;
@@ -192,7 +192,7 @@
 .fish1  {
   animation: {
     name: fish1;
-    duration: 6s;
+    duration: 18s;
     fill-mode: both;
     direction: alternate;
     iteration-count: infinite;
@@ -212,7 +212,7 @@
 .fish2  {
   animation: {
     name: fish2;
-    duration: 6s;
+    duration: 18s;
     fill-mode: both;
     timing-function: linear;
     direction: alternate;
@@ -241,7 +241,7 @@
 .fish3  {
   animation: {
     name: fish3;
-    duration: 6s;
+    duration: 18s;
     fill-mode: both;
     timing-function: linear;
     direction: alternate;

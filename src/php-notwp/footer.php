@@ -10,20 +10,20 @@
 
     <div class="footer__socials">
       <a href="#" class="footer__socials-vk">
-      <svg>
-        <use xlink:href="#vk" />
-      </svg>
+        <svg>
+          <use xlink:href="#vk" />
+        </svg>
       </a>
       <a href="#" class="footer__socials-odk">
-      <svg>
-        <use xlink:href="#odk" />
-      </svg>
+        <svg>
+          <use xlink:href="#odk" />
+        </svg>
       </a>
 
       <a href="#" class="footer__socials-insta">
-      <svg>
-        <use xlink:href="#instagram" />
-      </svg>
+        <svg>
+          <use xlink:href="#instagram" />
+        </svg>
       </a>
     </div>
 
@@ -43,15 +43,21 @@
   echo file_get_contents('../img/logo.svg') ?>
 
   <?php
-  // $src = get_template_directory_uri();
   $src =  "../img/svg/sprite/arrows.svg";
   echo file_get_contents($src); ?>
   <?php
-  // $src = get_template_directory_uri();
   $src =  "../img/svg/sprite/socials.svg";
   echo file_get_contents($src); ?>
 </div>
 
+<link rel="stylesheet" href="../../style.css">
+<script src="../../js/plugins/swiper.min.js"></script>
+<script src="../../js/plugins/wow.min.js"></script>
+<script src="../../js/components/swiperсustomize.js"></script>
+<script src="../../js/components/toggle-menu.js"></script>
+<script>
+  new WOW().init();
+</script>
 
 <?php wp_footer() ?>
 </body>
