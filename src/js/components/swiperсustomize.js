@@ -33,32 +33,80 @@ window.addEventListener('DOMContentLoaded', function () {
     loop: true,
     // spaceBetween: 18,
 
+    navigation: {
+      prevEl: '.way-one__arrow-prev',
+      nextEl: '.way-one__arrow-next',
+    },
     breakpoints: {
       1366: {
         slidesPerView: 3,
-        spaceBetween: 1,
-        navigation: {
-          prevEl: '.way-one__arrow-prev',
-          nextEl: '.way-one__arrow-next',
-        }
+        spaceBetween: 1
       },
       992: {
         slidesPerView: 2,
-        spaceBetween: 1,
-        navigation: {
-          prevEl: '.way-one__arrow-prev',
-          nextEl: '.way-one__arrow-next',
-        }
+        spaceBetween: 1
       },
       576: {
         slidesPerView: 1,
-        spaceBetween: 1,
-        navigation: {
-          prevEl: '.way-one__arrow-prev',
-          nextEl: '.way-one__arrow-next',
-        }
+        spaceBetween: 1
       }
     }
+  });
+  var reviewsSwiper = new Swiper('#reviews-slider', {
+    slidesPerView: 1,
+    loop: true,
+    spaceBetween: 5,
+    pagination: {
+      el: '.reviews__pagination',
+      clickable: true
+    },
+    navigation: {
+      prevEl: '.reviews__arrow-prev',
+      nextEl: '.reviews__arrow-next',
+    
+    }
+  });
+  var galleryThumbsSwiper = new Swiper('#gallery-thumbs-slider', {
+    spaceBetween: 17,
+    slidesPerView: 4,
+    loop: true,
+    loopedSlides: 5, //looped slides should be the same
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    navigation: {
+      prevEl: '.gallery-thumbs__arrow-prev',
+      nextEl: '.gallery-thumbs__arrow-next',
+    
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 3
+        // spaceBetween: 1
+      },
+      450: {
+        slidesPerView: 3,
+        spaceBetween: 7,
+      }
+    }
+  });
+  var galleryTopSwiper = new Swiper('#gallery-top-slider', {
+    slidesPerView: 1,
+    loop: true,
+    // spaceBetween: 10,
+    loopedSlides: 5, //looped slides should be the same
+
+    thumbs: {
+      swiper: galleryThumbsSwiper,
+    }
+  });
+  var gameSwiper = new Swiper('#game-slider', {
+    slidesPerView: 1,
+    allowTouchMove: false,
+    effect: 'fade',
+    pagination: {
+      el: '.game__pagination',
+      clickable: true //нужно убрать
+    },
   });
 
   // if (window.innerWidth <= 992) {

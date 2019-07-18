@@ -20,7 +20,7 @@
                 <span> от 28 000 руб.</span>
               </td>
               <td class="price-table__cell button">
-                <button class="price-table__btn btn btn-price">хочу поехать</button>
+                <button class="price-table__btn btn btn-o">хочу поехать</button>
               </td>
             </tr>
             <tr class="price-table__row" is-first-row="false">
@@ -43,7 +43,7 @@
                 <span> от 28 000 руб.</span>
               </td>
               <td class="price-table__cell button">
-                <button class="price-table__btn btn btn-price">хочу поехать</button>
+                <button class="price-table__btn btn btn-o">хочу поехать</button>
               </td>
             </tr>
             <tr class="price-table__row" is-first-row="true">
@@ -66,7 +66,7 @@
                 <span> от 28 000 руб.</span>
               </td>
               <td class="price-table__cell button">
-                <button class="price-table__btn btn btn-price">хочу поехать</button>
+                <button class="price-table__btn btn btn-o">хочу поехать</button>
               </td>
             </tr>
             <tr class="price-table__row" is-first-row="true">
@@ -89,7 +89,7 @@
                 <span> от 28 000 руб.</span>
               </td>
               <td class="price-table__cell button">
-                <button class="price-table__btn btn btn-price">хочу поехать</button>
+                <button class="price-table__btn btn btn-o">хочу поехать</button>
               </td>
             </tr>
             <tr class="price-table__row" is-first-row="true">
@@ -112,7 +112,7 @@
                 <span> от 28 000 руб.</span>
               </td>
               <td class="price-table__cell button">
-                <button class="price-table__btn btn btn-price">хочу поехать</button>
+                <button class="price-table__btn btn btn-o">хочу поехать</button>
               </td>
             </tr>
           </tbody>
@@ -128,4 +128,3 @@
             </tr>
           </tfoot>
         </table>
-      </div>

@@ -2,10 +2,9 @@
 @import 'settings/fonts';
 @import 'settings/vars';
 @import 'settings/mixins';
-@import 'widgets/interface';
-@import 'widgets/breadcrumbs';
-@import 'widgets/banner';
-@import 'widgets/price-table';
+
+@import 'lib/animate';
+@import 'lib/swiper.min';
 
 *,
 *::before,
@@ -20,23 +19,6 @@
     overflow-x: hidden;
     @include montserrat-400;
     color: $text-color;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-
-      z-index: -1;
-
-      background: {
-        repeat: no-repeat;
-        image: url('img/static/meduses/medusa-1.png'), url('img/static/meduses/medusa-2.png'), url('img/static/meduses/medusa-3.png');
-        position: calc(50% + 300px) 150px, calc(50% + 700px) 300px, calc(50% + 300px) 700px;
-      }
-    }
 }
 
 .wrap {
@@ -66,12 +48,16 @@ a {
     transition-duration: 0.2s;
 }
 
+address {
+  font-style: normal;
+}
+
 .title {
     @include arkhip-400;
-    font-size: 30px;
+    font-size: 20px;
+    line-height: 1.5;
     color: $title-color;
     text-transform: uppercase;
-    text-align: center;
 }
 
 #svg-sprites {
@@ -154,7 +140,7 @@ a {
     }
 
     .title {
-      font-size: 28px;
+      font-size: 18px;
   }
 }
 
@@ -172,15 +158,30 @@ a {
     }
 
     .title {
-      font-size: 21px;
+      font-size: 16px;
       text-align: center;
   }
 }
 
-@import 'lib/animate';
-@import 'lib/swiper.min';
+
+@import 'widgets/interface';
+@import 'widgets/breadcrumbs';
+@import 'widgets/banner';
+@import 'widgets/price-table';
+@import 'widgets/reviews';
+@import 'widgets/gallery';
+@import 'widgets/feedback';
+@import 'widgets/article';
+
 @import 'components/header';
 @import 'components/pages/tblock';
 @import 'components/pages/hot-tours';
 @import 'components/pages/way-one';
+@import 'components/pages/ways-page';
+@import 'components/pages/one-tour';
+@import 'components/pages/contacts';
+@import 'components/pages/game';
+@import 'components/pages/game-res';
+@import 'components/pages/blog';
+@import 'components/pages/one-article';
 @import 'components/footer';

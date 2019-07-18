@@ -1,37 +1,62 @@
 .way-one {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: -1;
+
+    background: {
+      repeat: no-repeat;
+      image: url('img/static/bg/bg-fishes.png');
+      position: calc(50% + 300px) 700px;
+    }
+  }
+  
   &-wrap {
     display: flex;
   }
 
   .tblock {
-    padding-bottom: 370px;
-    margin-bottom: -300px;
+    padding-bottom: 240px;
+    margin-bottom: -199px;
   }
 
   .main {
     flex-grow: 2;
-
+    min-width: 0; // чтобы main не выходил за пределы flex-container
     &-wrap {
       @include wrap-page;
     }
   }
 
   &-slider{
+    margin-bottom: 90px;
     position: relative;
     text-align: center;
-    &-container{
-      width: 100%;
-
-    }
-  }
-
-  &-slide {
-
   }
 
   .aside {
     width: 305px;
     @include banner-v;
+  }
+
+  &__arrow {
+    width: 27px;
+    height: 44px;
+    background: none;
+
+
+    &-svg {
+      width: 23px;
+      height: 40px;
+      fill: transparent;
+      stroke: #467aa6;
+      stroke-width: 4px;
+    }
   }
 }
 
@@ -62,3 +87,4 @@
     }
   }
 }
+

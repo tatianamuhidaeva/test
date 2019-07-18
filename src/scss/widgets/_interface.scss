@@ -16,6 +16,10 @@
   transition-duration: 0.4s;
   cursor: pointer;
 
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 5px 3px #8CBFFE;
+  }
   &-y {
     box-shadow: 0 5px 10px rgba(23, 28, 19, 0.5);
     background-color: $btn-color;
@@ -30,7 +34,7 @@
     }
   }
 
-  &-price {
+  &-o {
     box-shadow: none;
     border: 1px solid $btn-color;
     background-color: #fff;

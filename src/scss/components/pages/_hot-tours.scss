@@ -1,4 +1,21 @@
 .hot-tours {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: -1;
+
+    background: {
+      repeat: no-repeat;
+      image: url('img/static/meduses/medusa-1.png'), url('img/static/meduses/medusa-2.png'), url('img/static/meduses/medusa-3.png');
+      position: calc(50% + 300px) 150px, calc(50% + 700px) 300px, calc(50% + 300px) 700px;
+    }
+  }
+  
   &-wrap {
     display: flex;
   }
@@ -35,8 +52,8 @@
 }
 
 @media (max-width: $md) {
-  @include table-v;
   .hot-tours {
+    @include table-v;
     .aside {
       @include banner-v;
     }

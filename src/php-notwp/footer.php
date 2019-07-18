@@ -25,7 +25,6 @@
         <use xlink:href="#instagram" />
       </svg>
       </a>
-
     </div>
 
     <div class="footer__address d-none-md">

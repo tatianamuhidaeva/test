@@ -1,0 +1,98 @@
+.contacts{
+  &-wrap {
+    display: flex;
+  }
+  &__items {
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+
+    max-width: 825px;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #bebebe;
+  }
+  &__item {
+    flex-basis: 25%;
+    &-title {
+      margin-bottom: 20px;
+      @include montserrat-500;
+      font-size: 18px;
+      color: $title-color;
+    }
+    &-info {
+      display: block;
+      max-width: 195px;
+      @include montserrat-400;
+      font-size: 14px;
+      line-height: 2;
+      color: $text-color;
+    }
+  }
+
+
+
+  .main {
+    flex-grow: 2;
+    padding: 20px 0 50px;
+    min-width: 0; // чтобы main не выходил за пределы flex-container
+
+    &-wrap {
+      @include wrap-page;
+    }
+  }
+
+  .aside {
+    width: 305px;
+    @include banner-v;
+  }
+}
+
+
+@media (max-width: $lg) {
+  .contacts {
+    &-wrap {
+      flex-direction: column;
+    }
+
+    .aside {
+      width: 100%;
+      @include wrap-page;
+      @include banner-h;
+    }
+  }
+}
+
+
+@media (max-width: $md) {
+
+  .contacts {
+    .aside {
+      @include banner-v;
+    }
+  }
+}
+@media (max-width: $sm) {
+
+  .contacts {
+    &__item {
+    flex-basis: 50%;
+      margin-bottom: 20px;
+      &-title {
+        margin-bottom: 7px;
+      }
+    }
+  }
+}
+@media (max-width: $xs) {
+
+  .contacts {
+    &__item {
+    flex-basis: 100%;
+    }
+
+  }
+}

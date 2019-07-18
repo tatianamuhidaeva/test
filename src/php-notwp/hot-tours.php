@@ -2,17 +2,18 @@
 
 
 <div class="hot-tours">
-    <?php include('components/tblock.php') ?>
+    <?php include('widgets/tblock.php') ?>
   <div class="hot-tours-wrap wrap">
     <main class="main">
       <div class="main-wrap wrap-page">
 
         <!-- table PRICE -->
-        <?php include('components/price-table.php') ?>
+        <?php include('widgets/price-table.php') ?>
         <!-- end table PRICE -->
+      </div>
     </main>
     <aside class="aside">
-      <?php include('components/banner.php') ?>
+      <?php include('widgets/banner.php') ?>
     </aside>
   </div>
 </div>

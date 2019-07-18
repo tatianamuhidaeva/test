@@ -13,7 +13,7 @@
       padding-top: 10px;
     }
 
-    &[is-first-row="true"]{
+    &[is-first-row="true"] {
       .price-table__cell {
         padding-top: 30px;
       }
@@ -50,10 +50,11 @@
     &.button {
       width: 145px;
       text-align: right;
+
       .price-table__btn {
         @include small-btn;
         margin-left: auto;
-        margin-right: 0;    
+        margin-right: 0;
       }
     }
   }
@@ -95,10 +96,11 @@
       cursor: pointer;
 
       transition-duration: 0.4s;
-      &:hover{
+
+      &:hover {
         color: $text-color;
-      background-color: $btn-color;
-      box-shadow: 0 5px 10px rgba(23, 28, 19, 0.5);
+        background-color: $btn-color;
+        box-shadow: 0 5px 10px rgba(23, 28, 19, 0.5);
       }
     }
   }
@@ -110,6 +112,7 @@
       display: flex;
       flex-wrap: wrap;
     }
+
     &__row {
       display: block;
       box-shadow: 0px 4px 10px rgba(57, 175, 220, 0.5);
@@ -119,18 +122,20 @@
         padding-bottom: 0;
         border-bottom: 0;
       }
-      
-      &[is-first-row="true"]{
+
+      &[is-first-row="true"] {
         .price-table__cell {
           padding-top: 0;
         }
       }
-      @media (max-width: $md){
+
+      @media (max-width: $md) {
         flex-basis: 40%;
         padding: 10px 15px;
         margin: 20px 5%;
       }
-      @media (max-width: $sm){
+
+      @media (max-width: $sm) {
         flex-basis: 90%;
         padding: 10px 30px;
         margin: 20px 5%;
@@ -140,65 +145,68 @@
     &__cell {
       display: block;
       padding-top: 5px !important;
-  
+
       font-size: 18px;
       text-align: left;
-  
+
       .caption {
         margin-bottom: 10px;
         font-size: 28px;
         text-align: center;
-  
+
         img {
           // width: 23px;
         }
-  
+
       }
-  
+
       &.price {
         padding-top: 20px !important;
         border-left: 0;
         font-weight: bold;
       }
-  
+
       &.button {
         width: auto;
+
         // text-align: right;
         .price-table__btn {
           margin-left: auto;
-          margin-right: auto;  
+          margin-right: auto;
           position: relative;
-          
+
           bottom: -25px;
         }
       }
     }
+
     &__footer {
-    
-  
+
+
       &-small {
         padding-left: 50px;
         padding-right: 50px;
         width: auto;
         text-align: center;
-  @media (max-width: $xs) {
-    
-    padding-left: 0;
-    padding-right: 0;
-  }
+
+        @media (max-width: $xs) {
+
+          padding-left: 0;
+          padding-right: 0;
+        }
       }
-  
+
       &-btn {
         display: block;
         position: static;
-  margin: 0 auto;
-  margin-top: 15px;
-  @media (max-width: $xxs) {
-    font-size: 13px;
-    line-height: 27px;
-  }
+        margin: 0 auto;
+        margin-top: 15px;
+
+        @media (max-width: $xxs) {
+          font-size: 13px;
+          line-height: 27px;
+        }
       }
     }
   }
 }
-

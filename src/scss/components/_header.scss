@@ -3,10 +3,12 @@
   top: 0;
   z-index: 10;
   width: 100%;
-  color: #ffffff;
+
+  // color: #000000;
   a:hover {
     color: #000;
   }
+
   &-wrap {
     padding-top: 38px;
     padding-bottom: 30px;
@@ -17,7 +19,7 @@
 
   &__logo {
     &-svg {
-      --color-mir: #ffffff;
+      --color-mir: #00536f;
       width: 99px;
       height: 94px;
     }
@@ -39,7 +41,7 @@
 
     &-item {
       font-size: 18px;
-      
+
     }
   }
 
@@ -163,6 +165,10 @@
           transform: rotate(-7deg);
           transform-origin: right bottom;
 
+          a {
+            box-shadow: 0 5px 10px rgba(23, 28, 19, 0.5);
+          }
+
           &:nth-of-type(2) {
             animation-delay: 0.5s;
           }
@@ -281,34 +287,6 @@
       }
     }
 
-    &__hamburger {
-      $k: 0.7;
-      width: $k * 62px;
-      height: $k * 43px;
-      border-top: $k * 16px solid transparent;
-      border-bottom: $k * 16px solid transparent;
-      // border-radius: 5px;
-
-      span,
-      &:before,
-      &:after {
-        // border-radius: 5px;
-        height: $k * 9px;
-      }
-
-      span {
-        top: 0;
-      }
-
-      &:before {
-        top: -$k * 16px;
-      }
-
-      &:after {
-        bottom: -$k * 14px;
-      }
-
-    }
 
     &__info {
       flex-basis: 70px;
@@ -317,6 +295,7 @@
         width: 70px;
         height: 70px;
       }
+
       img {
         width: 40px;
       }
@@ -324,19 +303,36 @@
   }
 }
 
-@media (max-width: $xxs) {
+@media (max-width: $xs) {
   .header {
-  
-    &__info {
-      flex-basis: 55px;
-
-      &-phone {
-        width: 55px;
-        height: 55px;
-      }
-      img {
-        width: 30px;
+    &__nav {
+      &.open {
+        
+        li {
+          a {
+            font-size: 25px;
+            padding: 10px 30px 10px 30px;
+          }
+        }
       }
     }
   }
 }
+
+  @media (max-width: $xxs) {
+    .header {
+
+      &__info {
+        flex-basis: 55px;
+
+        &-phone {
+          width: 55px;
+          height: 55px;
+        }
+
+        img {
+          width: 30px;
+        }
+      }
+    }
+  }

@@ -1,0 +1,372 @@
+.game {
+  .main {
+    min-width: 0; // чтобы main не выходил за пределы flex-container
+
+    &-wrap {
+      @include wrap-page;
+    }
+  }
+
+  .tblock {
+    padding-bottom: 240px;
+    margin-bottom: -143px;
+  }
+
+  &-slider {
+    position: relative;
+
+    &-wrapper {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &-slide {
+
+
+    &__info {
+      padding: 0 0 15px;
+      background-color: #ededed;
+      text-align: center;
+
+      &-img {
+        height: 380px;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+
+      &-title {
+        margin-top: 52px;
+        margin-bottom: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      &-text {
+        display: block;
+        margin-bottom: 15px;
+      }
+
+      &-discount {
+        display: block;
+
+        @include arkhip-400;
+        color: #e75d1d;
+        font-size: 75px;
+        text-transform: uppercase;
+      }
+    }
+
+    &__question {
+      padding: 60px 0;
+      text-align: center;
+
+      &-title {
+        margin-bottom: 25px;
+      }
+
+      &-items {
+        display: flex;
+        justify-content: center;
+
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      &-item {
+
+        // flex-basis: 
+        &:not(:last-child) {
+          margin-right: 80px;
+        }
+
+        input[type="radio"] {
+          visibility: hidden;
+          position: absolute;
+
+          &:not(:checked)+label::before {
+            background-color: #fff;
+            border: 2px solid #bdbdbd;
+          }
+
+          &:checked+label::before {
+            background-color: $btn-color;
+            border: 2px solid $btn-color;
+          }
+
+        }
+
+        >label {
+          position: relative;
+          padding-left: 55px;
+
+          font-size: 14px;
+
+          &::before {
+            content: "";
+
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            width: 24px;
+            height: 24px;
+
+            border: 2px solid #bdbdbd;
+            background-color: #ffffff;
+
+            transform: rotate(45deg);
+            transition-duration: 0.2s;
+          }
+
+          &.attention::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &__pagination {
+    counter-reset: nth;
+
+    margin: 0 30px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    max-width: 480px;
+    width: 100%;
+
+
+    position: absolute;
+    left: 50%;
+    top: 360px;
+
+    transform: translateX(-50%);
+
+    span {
+      position: relative;
+
+      // margin: 0 30px;
+      width: 44px;
+      height: 44px;
+
+      border-radius: 0;
+      // background-color: #ffffff;
+      background-color: #dea828;
+
+      opacity: 1;
+
+      transform: rotate(45deg);
+      transition-duration: 0.2s;
+
+      font-size: 30px;
+      @include montserrat-500;
+      color: #fff;
+
+      &::before {
+        counter-increment: nth;
+        content: counter(nth);
+
+        position: absolute;
+        top: 7px;
+        left: 16px;
+
+        transform: rotate(-45deg);
+      }
+
+      &:focus,
+      &-active {
+        outline: none;
+      }
+
+      &.swiper-pagination-bullet-active {
+
+
+        ~span {
+          background-color: #ffffff;
+
+          color: $title-color;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: $lg) {
+  .game {
+
+    &-slide {
+
+      &__question {
+
+        &-item {
+
+          // flex-basis: 
+          &:not(:last-child) {
+            margin-right: 30px;
+          }
+
+          >label {
+            padding-left: 40px;
+            &::before{
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .game {
+
+    &-slide {
+      &__info {
+        &-title {
+          margin-bottom: 10px;
+        }
+
+        &-discount {
+          font-size: 55px;
+        }
+      }
+
+      &__question {
+      padding: 35px 0;
+
+        &-items {
+          flex-direction: column;
+        }
+
+        &-item {
+          margin-bottom: 20px;
+
+          &:not(:last-child) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .game {
+
+    &-slide {
+      &__info {
+        &-text{
+          font-size: 14px;
+        }
+      }
+      &__question {
+        padding: 35px 0;
+  
+          &-item {
+            >label {
+              font-size: 14px;
+            }
+          }
+        }
+    }
+    &__pagination {
+
+      max-width: none;
+      width: auto;
+      margin: 0 auto;
+
+      span {
+        margin: 0 20px;
+
+        width: 40px;
+        height: 40px;
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .game {
+
+    &-slide {
+      &__info {
+        &-title {
+          margin-top: 30px;
+        }
+        &-text{
+          margin-bottom: 5px;
+        }
+        &-discount{
+font-size: 40px;
+        }
+      }
+    }
+    &__pagination {
+      top: 363px;
+
+      span {
+        margin: 0 15px;
+
+        width: 35px;
+        height: 35px;
+        font-size: 24px;
+
+        &::before {
+          top: 4px;
+          left: 11px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $xxs) {
+  .game {
+    &-slide {
+      &__info {
+        &-text{
+          font-size: 12px;
+        }
+      }
+      &__question {
+        padding: 35px 0;
+  
+          &-item {
+            >label {
+              padding-left: 25px;
+              font-size: 12px;
+              &::before {
+                width: 15px;
+                height: 15px;
+              }
+            }
+          }
+        }
+    }
+    &__pagination {
+      top: 366px;
+
+      span {
+        margin: 0 10px;
+        width: 28px;
+        height: 28px;
+        font-size: 20px;
+
+        &::before {
+          top: 4px;
+          left: 11px;
+        }
+      }
+    }
+  }
+}
