@@ -1,0 +1,22 @@
+.kama_breadcrumbs {
+  list-style: none;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+
+  @include montserrat-400;
+  font-size: 11px;
+  color: #5a7495;
+  
+  a:hover {
+    color: lighten($ways-color, 10%);
+}
+}
+
+@media (max-width: $md) {
+  .kama_breadcrumbs {
+    max-width: 645px;
+    margin-left: 0;
+    margin-right: auto;
+  }
+}

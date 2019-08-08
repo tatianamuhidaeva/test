@@ -8,8 +8,8 @@ var run = require("run-sequence");
 var server = require("browser-sync").create();
 var php = require("gulp-connect-php");
 var wait = require("gulp-wait");
-var gutil = require("gulp-util");
-var pump = require("pump");
+// var gutil = require("gulp-util");
+// var pump = require("pump");
 
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
@@ -26,7 +26,7 @@ var svgstore = require("gulp-svgstore");
 
 var uglify = require("gulp-uglify");
 var concat = require("gulp-concat");
-const babel = require("gulp-babel");
+// const babel = require("gulp-babel");
 
 // Config
 const config = require("./config.json");
@@ -36,15 +36,15 @@ const fonts = config.fonts;
 const syntax = config.syntax;
 var dev = false;
 
-const babelPlugins = {
-	plugins: [
-		"@babel/plugin-transform-template-literals",
-		"transform-es2015-arrow-functions",
-		"transform-es2015-block-scoped-functions",
-		"transform-es2015-block-scoping",
-		"transform-es2015-shorthand-properties"
-	]
-};
+// const babelPlugins = {
+// 	plugins: [
+// 		"@babel/plugin-transform-template-literals",
+// 		"transform-es2015-arrow-functions",
+// 		"transform-es2015-block-scoped-functions",
+// 		"transform-es2015-block-scoping",
+// 		"transform-es2015-shorthand-properties"
+// 	]
+// };
 
 
 
@@ -68,17 +68,13 @@ gulp.task("serve", function() {
 	// 	}
 	// });
 
-	gulp.watch(srcPath + "/img/*.{png,jpg,svg,mp4}", ["images"]);
-	gulp.watch(srcPath + "/img/**/*.{png,jpg,svg,mp4}", ["images"]);
-	gulp.watch(srcPath + "/scss/**/**/*.{scss,sass,css}", ["style"]);
 	gulp.watch(srcPath + "/scss/**/*.{scss,sass,css}", ["style"]);
-	gulp.watch(srcPath + "/scss/*.{scss,sass,css}", ["style"]);
 	gulp.watch(srcPath + "/js/plugins/*.js", ["js-plugins"]);
 	gulp.watch(srcPath + "/js/libs/*.js", ["js-libs"]);
 	gulp.watch(srcPath + "/js/components/*.js", ["js-components"]);
 	gulp.watch(srcPath + "/js/separate/*.js", ["js-copy"]);
 	gulp.watch(srcPath + "/php/**/*.php", ["php"]);
-	gulp.watch(srcPath + "/php/*.php", ["php"]);
+	// gulp.watch(srcPath + "/img/**/*", ["png", "jpg", "svg"]);
 });
 
 // Styles
@@ -115,7 +111,7 @@ gulp.task("images", function() {
 
 gulp.task("sprite-svg", function() {
 	return gulp
-		.src(srcPath + "/img/svg/*.svg")
+		.src(srcPath + "/img/svg/icon-*.svg")
 		.pipe(
 			svgstore({
 				inlineSvg: true
@@ -136,7 +132,7 @@ gulp.task("js-copy", function() {
 	return gulp
 		.src(srcPath + "/js/separate/*.js")
 		.pipe(plumber())
-		.pipe(babel(babelPlugins))
+		// .pipe(babel(babelPlugins))
 		.pipe(gulp.dest(publicPath + "/js"))
 		.pipe(server.stream());
 });
@@ -146,7 +142,7 @@ gulp.task("js-libs", function() {
 		.src(srcPath + "/js/libs/*.js")
 		.pipe(plumber())
 		.pipe(concat("libs.js"))
-		.pipe(babel(babelPlugins))
+		// .pipe(babel(babelPlugins))
 		.pipe(gulp.dest(publicPath + "/js"))
 		.pipe(uglify())
 		.pipe(rename("libs.min.js"))
@@ -159,7 +155,7 @@ gulp.task("js-plugins", function() {
 		.src(srcPath + "/js/plugins/*.js")
 		.pipe(plumber())
 		.pipe(concat("plugins.js"))
-		.pipe(babel(babelPlugins))
+		// .pipe(babel(babelPlugins))
 		.pipe(gulp.dest(publicPath + "/js"))
 		.pipe(uglify())
 		.pipe(rename("plugins.min.js"))
@@ -171,7 +167,7 @@ gulp.task("js-components", function() {
 	return gulp
 		.src(srcPath + "/js/components/*.js")
 		.pipe(plumber())
-		.pipe(babel(babelPlugins))
+		// .pipe(babel(babelPlugins))
 		.pipe(concat("main.js"))
 		.pipe(gulp.dest(publicPath + "/js"))
 		.pipe(uglify())
@@ -186,11 +182,11 @@ gulp.task("js", function(done) {
 });
 
 gulp.task("html", function() {
-  return gulp.src(srcPath + "/*.{html,php}")
-    // .pipe(posthtml([
-    //   include()
-    // ]))
-    .pipe(gulp.dest(publicPath));
+  return gulp.src("./*.{html,php}")
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest("build"));
 });
 
 gulp.task("php", function() {
@@ -211,36 +207,34 @@ gulp.task("clean", function() {
 	return del(publicPath);
 });
 
-// gulp.task("build", function(done) {
-// 	run("clean", "copy", "webp", "images", "style", "sprite", "js", done);
-// });
+gulp.task("build", function(done) {
+	run("clean", "copy", "webp", "images", "style", "sprite", "js", done);
+});
 
 gulp.task("build", function(done) {
 	dev = false;
 	run(
-		"clean",
+		// "clean",
 		"copy",
 		// "webp",
 		"images",
 		"style",
-		// "sprite-svg",
+		"sprite-svg",
 		"js",
 		"php",
-		"html",
 		done
 	);
 });
 
 gulp.task("dev", function(done) {
 	run(
-		"clean", 
+		// "clean", 
 		"copy", 
-		// "webp", 
-		"images",
+    // "webp", 
+    "images",
 		"style", 
 		"js", 
 		"php", 
-		"html",
 		done
 	);
 });

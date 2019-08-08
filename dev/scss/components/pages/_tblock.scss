@@ -1,0 +1,106 @@
+.tblock {
+  padding-top: 170px;
+  padding-bottom: 70px;
+
+  background: {
+    repeat: no-repeat;
+    image: url('img/static/bg/bg-compass.png'), url('img/static/bg/bg-header.svg');
+    size: auto, 100% 100%;
+    position: 0 100%, 50% 0;
+  }
+
+  &-wrap-page {
+    @include wrap-page;
+  }
+
+  &-info {
+    position: relative;
+    padding: 0 10px 20px 0;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    @include arkhip-400;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: $title-color;
+  }
+
+  &__text {
+    position: relative;
+    max-width: 645px;
+    @include montserrat-400;
+    font-size: 16px;
+    color: $text-color;
+    line-height: 1.5;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -30px;
+      right: -30px;
+      width: 44px;
+      height: 44px;
+
+      background: {
+        repeat: no-repeat;
+        color: transparent;
+        image: url('img/svg/corner.svg');
+        size: contain;
+        position: center;
+      }
+
+      transform: rotate(180deg);
+    }
+  }
+}
+
+
+@media (max-width: $md) {
+  .tblock {
+    &-info {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .tblock {
+    &__title {
+      font-size: 26px;
+
+    }
+
+    &__text {
+      font-size: 14px;
+
+    }
+  }
+}
+@media (max-width: $xs) {
+  .tblock {
+    &__title {
+      text-align: center;
+      font-size: 24px;
+margin-bottom: 15px;
+    }
+
+    &__text {
+      font-size: 14px;
+      text-align: center;
+
+    }
+  }
+}
+@media (max-width: $xxs) {
+  .tblock {
+    &__title {
+      font-size: 22px;
+margin-bottom: 10px;
+    }
+
+    &__text {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,10 +1,10 @@
 {
-	"dev": "src",
-	"build": "wp/wp-content/themes/mir/",
+	"dev": "dev",
+	"build": "wp/wp-content/themes/mir",
 	"proxy": {
-		"status": false, 
-		"target": "true-code"
+		"status": true, 
+		"target": "mir"
 	},
 	"syntax": "php",
-	"fonts": []
+	"fonts": ["my-fonts"]
 }

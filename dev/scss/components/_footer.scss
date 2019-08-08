@@ -1,0 +1,158 @@
+.footer {
+
+
+  &-wrap {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    &-svg {
+      --color-mir: rgb(9, 83, 109);
+      width: 99px;
+      height: 94px;
+      // width: 120px;
+      // height: 116px;
+    }
+  }
+
+  &__socials {
+
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+
+    svg {
+      --color-vk: rgb(165, 171, 175);
+      --color-odk: rgb(165, 171, 175);
+      --color-insta: rgb(165, 171, 175);
+
+      width: 40px;
+      height: 40px;
+    }
+
+
+    &-vk:hover {
+      svg {
+
+        --color-vk: #4D76A1;
+      }
+    }
+
+    &-odk:hover {
+      svg {
+
+        --color-odk: #FF9800;
+      }
+    }
+
+    &-insta:hover {
+      svg {
+
+        --color-insta: #EE539E;
+      }
+    }
+  }
+
+  &__address {
+    flex-basis: 650px;
+
+    address {
+      font-style: normal;
+      font-size: 18px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+
+    &-btn {
+      margin-right: 50px;
+      padding-left: 15px;
+      padding-right: 15px;
+      height: 31px;
+      border-radius: 16px;
+
+      font-size: 16px;
+    }
+
+    &-phone {
+      @include montserrat-400;
+      font-size: 18px;
+      text-align: center;
+    }
+
+  }
+}
+
+@media (max-width: $xlg) {
+  .footer {
+    &__address {
+      flex-basis: auto;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .footer {
+    &-wrap {
+      padding-top: 100px;
+      padding-bottom: 54px;
+      flex-direction: column;
+    }
+
+    &__logo {
+      &-svg {
+        --color-mir: #000000;
+        width: 206px;
+        height: 195px;
+      }
+
+      margin-bottom: 54px;
+    }
+
+    &__socials {
+
+      width: 203px;
+      margin-bottom: 100px;
+
+      svg {
+        width: 51px;
+        height: 51px;
+      }
+    }
+
+    &__info {
+      &-btn {
+        margin-right: 0;
+        @include big-btn;
+
+      }
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .footer {
+    &-wrap {
+      padding-top: 60px;
+      padding-bottom: 54px;
+      flex-direction: column;
+    }
+    &__logo {
+      &-svg {
+        width: 180px;
+        height: 175px;
+      }
+
+      margin-bottom: 54px;
+    }
+    &__socials {
+      margin-bottom: 50px;
+    }
+  }
+}

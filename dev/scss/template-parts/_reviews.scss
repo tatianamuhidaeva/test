@@ -1,0 +1,150 @@
+.reviews {
+  padding: 65px 0;
+
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &-slider {
+    position: relative;
+    padding: 0 50px;
+  }
+
+  &-slide {
+    margin-bottom: 50px;
+    display: flex;
+
+    &__img {
+      flex-shrink: 0;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto;
+
+      img {
+        max-width: none;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      min-width: 0;
+      margin-left: 50px;
+      padding-left: 20px;
+
+      &-title {
+        margin-bottom: 25px;
+        @include montserrat-500;
+        font-size: 18px;
+      }
+
+      &-paragraph {
+        @include montserrat-400;
+        font-size: 14px;
+        line-height: 2;
+      }
+    }
+  }
+
+  &__pagination {
+    left: 50%;
+    transform: translateX(-50%);
+
+    span {
+      margin: 0 6px;
+      border-radius: 0;
+      width: 12px;
+      height: 12px;
+      background-color: #dea828;
+      transform: rotate(45deg);
+
+      &:not(.swiper-pagination-bullet-active) {
+        background-color: #d1d1d1;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__arrow {
+    width: 27px;
+    height: 44px;
+    background-image: none;
+
+
+    &-svg {
+      width: 23px;
+      height: 40px;
+      fill: transparent;
+      stroke: #000;
+      stroke-width: 4px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .reviews {
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &-slide {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .reviews {
+    &-slider {
+      padding: 0;
+    }
+
+    &-slide {
+      flex-direction: column;
+
+      &__content {
+        margin-left: 0;
+        margin-top: 30px;
+        padding-left: 0;
+        text-align: center;
+      }
+    }
+
+    &__arrow {
+      top: 100px;
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .reviews {
+    &-slide {
+      &__img {
+        width: 150px;
+        height: 150px;
+        img {
+          width: 150px;
+          height: 150px;
+        }
+      }
+
+      &__content {
+        &-paragraph {
+          line-height: 1.5;
+        }
+      }
+    }
+
+    &__arrow {
+      top: 75px;
+      width: 15px;
+
+      &-svg {
+        width: 15px;
+      }
+    }
+  }
+}

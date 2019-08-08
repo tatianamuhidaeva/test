@@ -1,0 +1,211 @@
+@import 'lib/normalize';
+@import 'lib/swiper.min';
+
+@import 'settings/fonts';
+@import 'settings/vars';
+@import 'settings/mixins';
+
+@import 'settings/animate';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    @include montserrat-400;
+    color: $text-color;
+}
+
+.wrap {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 5.8%;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+address {
+  font-style: normal;
+}
+
+.title-index {
+    @include arkhip-400;
+    font-size: 30px;
+    color: $red-text-color;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.title {
+  @include arkhip-400;
+  font-size: 20px;
+  line-height: 1.5;
+  color: $title-color;
+  text-transform: uppercase;
+  
+}
+
+#svg-sprites {
+  display: none;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+@media (max-width: $xlg) {  //default-wrap / 95%
+    .wrap {
+      padding: 0 2.5%;
+    }
+    .d-block-xlg {
+      display: block !important;
+  }
+
+  .d-inline-xlg {
+      display: inline !important;
+  }
+
+  .d-none-xlg {
+      display: none !important;
+  }
+}
+
+
+@media (max-width: $lg) {
+    .d-block-lg {
+        display: block !important;
+    }
+
+    .d-inline-lg {
+        display: inline !important;
+    }
+
+    .d-none-lg {
+        display: none !important;
+    }
+}
+@media (max-width: $md) {
+    .d-block-md {
+        display: block !important;
+    }
+
+    .d-inline-md {
+        display: inline !important;
+    }
+
+    .d-none-md {
+        display: none !important;
+    }
+}
+
+@media (max-width: $sm) {
+    .d-block-sm {
+        display: block !important;
+    }
+
+    .d-inline-sm {
+        display: inline !important;
+    }
+
+    .d-none-sm {
+        display: none !important;
+    }
+
+    .title-index {
+      font-size: 28px;
+  }
+
+  .title {
+    font-size: 18px;
+}
+}
+
+@media (max-width: $xs) {
+    .d-block-xs {
+        display: block !important;
+    }
+
+    .d-inline-xs {
+        display: inline !important;
+    }
+
+    .d-none-xs {
+        display: none !important;
+    }
+
+    .title-index {
+      font-size: 21px;
+      text-align: center;
+  }
+  .title {
+    font-size: 16px;
+    text-align: center;
+}
+}
+
+@import 'settings/interface';
+@import 'template-parts/pagination';
+@import 'template-parts/breadcrumbs';
+@import 'template-parts/banner';
+@import 'template-parts/price-table';
+@import 'template-parts/reviews';
+@import 'template-parts/gallery';
+@import 'template-parts/feedback';
+@import 'template-parts/article';
+@import 'template-parts/popup';
+
+@import 'components/header';
+
+@import 'components/index/main';
+@import 'components/index/ways';
+@import 'components/index/ocean';
+@import 'components/index/partners';
+@import 'components/index/promo';
+@import 'components/index/game';
+
+@import 'components/pages/tblock';
+@import 'components/pages/hot-tours';
+@import 'components/pages/way-one';
+@import 'components/pages/ways-page';
+@import 'components/pages/one-tour';
+@import 'components/pages/contacts';
+@import 'components/pages/game';
+@import 'components/pages/game-res';
+@import 'components/pages/blog';
+@import 'components/pages/one-article';
+
+@import 'components/pages/404';
+
+@import 'components/footer';

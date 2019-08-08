@@ -1,0 +1,93 @@
+.way-one {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: -1;
+
+    background: {
+      repeat: no-repeat;
+      image: url('img/static/bg/bg-fishes.png');
+      position: calc(50% + 300px) 700px;
+    }
+  }
+  
+  &-wrap {
+    display: flex;
+  }
+
+  .tblock {
+    padding-bottom: 240px;
+    margin-bottom: -199px;
+  }
+
+  .main {
+    flex-grow: 2;
+    min-width: 0; // чтобы main не выходил за пределы flex-container
+    &-wrap {
+      @include wrap-page;
+    }
+  }
+
+  &-slider{
+    margin-bottom: 90px;
+    position: relative;
+    text-align: center;
+  }
+
+  .aside {
+    flex-shrink: 0;
+    max-width: 305px;
+    flex-basis: 100%;
+    @include banner-v;
+  }
+
+  &__arrow {
+    width: 27px;
+    height: 44px;
+    background: none;
+
+
+    &-svg {
+      width: 23px;
+      height: 40px;
+      fill: transparent;
+      stroke: #467aa6;
+      stroke-width: 4px;
+    }
+  }
+}
+
+@media (max-width: $xlg) {
+  .way-one {
+    &-wrap {
+      flex-direction: column;
+    }
+
+    .main {
+      margin-bottom: 70px;
+    }
+
+    .aside {
+      max-width: none;
+      width: 100%;
+      @include wrap-page;
+      @include banner-h;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  @include table-v;
+
+  .way-one {
+    .aside {
+      @include banner-v;
+    }
+  }
+}
+

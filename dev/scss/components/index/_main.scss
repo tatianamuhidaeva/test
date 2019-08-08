@@ -1,0 +1,214 @@
+.main-ind {
+
+  h1 {
+    text-indent: -9999px;
+  }
+
+  &-wrap {
+    height: 130vh;
+    padding-top: 377px;
+    padding-bottom: 320px;
+
+    background: {
+      repeat: no-repeat;
+      image: url('img/static/bg/bg-main/bg-main@1920.jpg');
+      position: center top;
+      size: cover;
+    }
+
+    animation: fadeIn 3s both, heightInNormal 2s ease-in forwards 5s; 
+
+  }
+  $delay-animation: 1s;
+  $delay-animation__title: $delay-animation + 1s;
+  $delta: 0.4s;
+
+  &__title {
+    position: relative;
+
+    max-width: 834px;
+    margin: 0 auto;
+    text-align: right;
+    animation: fadeIn 3s both $delay-animation; 
+
+    &-img {
+      position: relative;
+      z-index: 1;
+    }
+    &-compass {
+      position: absolute;
+      top: -41px;
+      left: 176px;
+
+      width: 147px;
+      height: 147px;
+
+      background: {
+        repeat: no-repeat;
+        image: url('img/svg/compass.svg');
+        size: contain;
+        position: center;
+      }
+     
+    animation: fadeIn 1s both $delay-animation__title, rotate 3s ease-in-out infinite alternate; 
+
+    }
+
+    &-romb-top,
+    &-romb-right,
+    &-romb-bottom,
+    &-romb-left {
+      position: absolute;
+      top: 12px;
+      left: 186px;
+
+      width: 130px;
+      height: 43px;
+
+      background: {
+        repeat: no-repeat;
+        image: url('img/svg/line_romb.svg');
+        size: contain;
+        position: center;
+      }
+
+    }
+    &-romb-top {
+      transform: translateY(-150px) rotate(90deg);
+      animation: fadeIn 1s both ($delay-animation__title + $delta);
+    }
+
+    &-romb-right {
+      transform: translateX(679px) rotate(180deg);
+      animation: fadeIn 1s both ($delay-animation__title + 2 * $delta);
+    }
+
+    &-romb-bottom {
+      transform: translateY(150px) rotate(-90deg);
+      animation: fadeIn 1s both ($delay-animation__title + 3 * $delta);
+    }
+
+    &-romb-left {
+      transform: translateX(-350px) rotate(0);
+      animation: fadeIn 1s both ($delay-animation__title + 4 * $delta);
+    }
+  }
+
+  &__subtitle {
+    display: inline-block;
+
+    text-shadow: 0 5px 7px #1b2a3a;
+    color: #ffffff;
+    @include montserrat-300;
+    font-size: 48px;
+    line-height: 1;
+
+    animation: fadeIn 1s both ($delay-animation__title + 5 * $delta);
+
+    &::after {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 100%;
+      background-color: #fff;
+
+      transform-origin: 0 50%;
+      animation: widthInLeft 1s both ($delay-animation__title + 5 * $delta);
+    }
+  }
+}
+
+
+
+@media (max-width: $xlg) {
+  .main-ind {
+    &-wrap {
+      padding-top: 270px;
+      padding-bottom: 303px;
+      background-image: url('img/static/bg/bg-main/bg-main@1684.jpg');
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .main-ind {
+    &-wrap {
+      background-image: url('img/static/bg/bg-main/bg-main@1366.jpg');
+
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .main-ind {
+    &-wrap {
+      padding-top: 230px;
+      background-image: url('img/static/bg/bg-main/bg-main@992.jpg');
+    }
+
+    &__title {
+      width: 565px;
+      text-align: center;
+
+      img {
+        margin-bottom: 35px;
+      }
+    }
+
+    &__subtitle {
+      padding: 0 23px 10px;
+      border-radius: 10px;
+      border: 1px solid #ffffff;
+      line-height: 48px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .main-ind {
+    &-wrap {
+      background-image: url('img/static/bg/bg-main/bg-main@768.jpg');
+      background-position: left top;
+    }
+
+    &__title {
+      width: 500px;
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .main-ind {
+    &-wrap{
+      padding-top: 187px;
+      padding-bottom: 200px;
+    }
+    &__title{
+      width: 400px;
+    }
+    &__subtitle {
+      padding: 0 17px 6px;
+      font-size: 38px;
+      line-height: 38px;
+    }
+  }
+}
+@media (max-width: $xxs) {
+  .main-ind {
+    &-wrap{
+      padding-top: 187px;
+      padding-bottom: 200px;
+    }
+    &__title{
+      width: 280px;
+      &-img {
+        margin-bottom: 17px;
+      }
+    }
+    &__subtitle {
+      padding: 0 17px 6px;
+      font-size: 28px;
+      line-height: 28px;
+    }
+  }
+}

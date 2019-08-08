@@ -1,0 +1,182 @@
+.gallery {
+  text-align: center;
+  &-top {
+    position: relative;
+
+    &-slide {
+      height: 635px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &-thumbs {
+    &__arrow {
+      // left: 50%;
+      top: 80px;
+
+      background: none;
+      
+
+      &-svg {
+        width: 23px;
+        height: 40px;
+        fill: transparent;
+        stroke: #000;
+        stroke-width: 4px;
+      }
+    }
+
+    &-slider {
+      display: inline-block;
+      position: relative;
+      padding-left: 45px;
+      padding-right: 45px;
+      // width: 525px;
+      top: -50px;
+      line-height: 0;
+    }
+
+    &-slide {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      -webkit-clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%);
+      clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%);
+      -webkit-clip-path: url("#gallery-thumbs-slide-shape");
+      /* required for Webkit/Blink browsers if you're using only inline SVG clipping paths, but not CSS clip-path */
+      clip-path: url("#gallery-thumbs-slide-shape");
+
+      img {
+        line-height: 0;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#fff, 0.6);
+        opacity: 0;
+
+        transition-duration: 0.3s;
+      }
+
+      &:not(.swiper-slide-thumb-active) {
+        &::after {
+          opacity: 1;
+        }
+      }
+
+      &.swiper-slide-thumb-active {
+        &::after {
+          opacity: 0;
+        }
+      }
+    }
+
+  }
+}
+
+
+@media (max-width: $md) {
+  .gallery {
+    &-top {
+      &-slide {
+        height: 0.5 * $md;
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .gallery {
+    &-thumbs {  
+      &-slider {
+      padding: 0 35px;
+        top: -35px;
+        // width: 418px;
+      }
+      &-slide {
+        width: 70px;
+        height: 70px;
+        img {
+          width: 70px;
+          height: 70px;
+        }
+      }
+      &__arrow {
+        top: 57px;
+        width: 15px;
+        height: 29px;
+
+        &-svg {
+          width: 15px;
+          height: 29px;
+        }
+      }   
+    }
+  }
+}
+
+@media (max-width: $xs) {
+
+  .gallery {
+    &-top {
+      &-slide {
+        height: 0.5 * $xs;
+      }
+    }
+    &-thumbs {  
+      &-slider {
+      padding: 0 35px;
+        top: -35px;
+        // width: 330px;
+      }
+    }
+  }
+}
+@media (max-width: $xxs) {
+  .gallery {
+    &-top {
+      &-slide {
+        height: 0.5 * $xxs;
+      }
+    }
+    &-thumbs {  
+      &-slider {
+        padding: 0 20px;
+        top: -25px;
+        // width: 220px;
+      }
+
+      &-slide {
+        width: 50px;
+        height: 50px;
+
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      &__arrow {
+        top: 53px;
+        width: 10px;
+        height: 20px;
+        &-svg {
+          width: 10px;
+          height: 20px;
+        }
+      }     
+    }
+  }
+}
